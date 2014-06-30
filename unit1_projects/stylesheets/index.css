@@ -1,0 +1,68 @@
+html	{
+	background: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/sailing.jpg) no-repeat center center fixed;
+	background-size: cover;
+		}
+
+body 	{
+	font-family: "Lucida Sans Unicode", sans-serif;
+		}
+
+#headline	{
+	border-bottom: 3px solid #05058d;
+	position: absolute;
+	width:100%;
+	top:25px;
+	left:0;
+		}
+
+#name 	{
+		float: left;
+		padding-left: 15px;
+		padding-top: 0;
+		font-size: 48px;
+		color: #50310e;
+		}
+
+#nav	{
+		float: right;
+		margin-top: 14px;
+		font-size: 24px;
+}
+
+#nav li a{display: block;
+		padding-top:10px;
+		padding-right:18px;
+		padding-left:18px;
+		padding-bottom: 8px;
+		text-decoration: none;
+		color:#50310e;
+		font-weight: bold;
+}
+
+#nav ul	{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		padding-right: 15px;
+		}
+
+#nav li{float: left;}	
+
+#nav a:hover{
+		color: #fef5df;
+		background-color: #50310e;
+		background-size: 100% 100%;
+		}
+
+#footer	{
+	text-align: center;
+	background-color: #50310e;
+	color: #fef5df;
+	padding-bottom: 1px;
+	font-size: 13px;
+	width:100%;
+	position: absolute;
+	bottom:0;
+	left:0;
+	opacity: .9;
+		}
