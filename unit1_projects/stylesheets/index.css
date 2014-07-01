@@ -1,5 +1,5 @@
 html	{
-	background: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/sailing.jpg) no-repeat center center fixed;
+	background: url(unit1_projects/images/sailing.jpg) no-repeat center center fixed;
 	background-size: cover;
 		}
 
@@ -7,7 +7,7 @@ body 	{
 	font-family: "Lucida Sans Unicode", sans-serif;
 		}
 
-#headline	{
+#headline{
 	border-bottom: 3px solid #05058d;
 	position: absolute;
 	width:100%;
@@ -16,42 +16,43 @@ body 	{
 		}
 
 #name 	{
-		float: left;
-		padding-left: 15px;
-		padding-top: 0;
-		font-size: 48px;
-		color: #50310e;
+	float: left;
+	padding-left: 15px;
+	padding-top: 0;
+	font-size: 48px;
+	color: #50310e;
 		}
 
 #nav	{
-		float: right;
-		margin-top: 14px;
-		font-size: 24px;
+	float: right;
+	margin-top: 14px;
+	font-size: 24px;
 }
 
-#nav li a{display: block;
-		padding-top:10px;
-		padding-right:18px;
-		padding-left:18px;
-		padding-bottom: 8px;
-		text-decoration: none;
-		color:#50310e;
-		font-weight: bold;
+#nav li a{
+	display: block;
+	padding-top:10px;
+	padding-right:18px;
+	padding-left:18px;
+	padding-bottom: 8px;
+	text-decoration: none;
+	color:#50310e;
+	font-weight: bold;
 }
 
 #nav ul	{
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		padding-right: 15px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-right: 15px;
 		}
 
 #nav li{float: left;}	
 
 #nav a:hover{
-		color: #fef5df;
-		background-color: #50310e;
-		background-size: 100% 100%;
+	color: #fef5df;
+	background-color: #50310e;
+	background-size: 100% 100%;
 		}
 
 #footer	{
