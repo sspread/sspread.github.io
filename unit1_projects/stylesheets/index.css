@@ -71,6 +71,7 @@ body	{
 @media screen and (max-width: 925px){
 #headline {
 	text-align: center;
+	top: 0px;
 }
 #name{
 	float: none;
