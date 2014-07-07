@@ -15,7 +15,7 @@ body 	{
 
 #name 	{
 	float: left;
-	padding-left: 15px;
+	margin-left: 15px;
 	padding-top: 0;
 	font-size: 48px;
 	color: #50310e;
@@ -84,7 +84,6 @@ body 	{
 */
 
 img		{
-	height: 100%;
 	float: left;
 	width: 400px;
 	color:inherit;
@@ -101,13 +100,16 @@ img		{
 		}
 
 
-
-
 .blog_head h5{
 	float: right;
-	letter-spacing: 1px;}
+	letter-spacing: 1px;
+	margin: 0;
+	padding-top: 3px;
+			}
 
-.blog_head h3{letter-spacing: 1px;}
+.blog_head h3{letter-spacing: 1px;
+		margin: 0;
+		}
 
 /*#footer	{
 	text-align: center;
