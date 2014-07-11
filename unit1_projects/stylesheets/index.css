@@ -94,7 +94,7 @@ body {background-size: auto;}
 @media screen and (max-width: 720px){
 body	{
 	background-image: url(/unit1_projects/images/sailing2.jpg);
-	background-size: auto;
+	background-size: cover;
 	background-position: 0% 35%;
 }
 
