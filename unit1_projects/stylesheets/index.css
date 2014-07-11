@@ -1,5 +1,5 @@
 body	{
-	background: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/sailing.jpg) no-repeat center fixed;
+	background: url(/unit1_projects/images/sailing.jpg) no-repeat center fixed;
 	background-size: cover;
 
 	font-family: "Lucida Sans Unicode", sans-serif;
@@ -92,7 +92,7 @@ body {background-size: auto;}
 
 @media screen and (max-width: 720px){
 body	{
-	background-image: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/sailing2.jpg);
+	background-image: url(/unit1_projects/images/sailing2.jpg);
 	background-size: auto;
 
 }
