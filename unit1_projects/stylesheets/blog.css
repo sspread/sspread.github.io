@@ -71,6 +71,8 @@ body 	{
 	float: right;
 	padding-right: 15px;
 	padding-left: 15px;
+	text-align: justify;
+	text-justify: newspaper;
 		}
 
 /*#sidebar{
@@ -100,7 +102,7 @@ img		{
 		}
 
 
-.blog_head h5{
+.blog_head h4{
 	float: right;
 	letter-spacing: 1px;
 	margin: 0;
@@ -109,6 +111,14 @@ img		{
 
 .blog_head h3{letter-spacing: 1px;
 		margin: 0;
+		}
+
+hr 		{
+	background-color: #50310e;
+	height: 2px;
+	border: none;
+	margin: 50px 25px;
+	opacity: .5;
 		}
 
 /*#footer	{
