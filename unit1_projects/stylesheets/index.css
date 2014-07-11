@@ -71,16 +71,17 @@ body	{
 @media screen and (max-width: 925px){
 body {background-size: auto;}
 #headline {
-	text-align: center;
+	text-align: right;
 	top: 0px;
 }
 #name{
 	float: none;
+	margin-right: 15px;
 }
 
 #nav {
 	float: none;
-	text-align: center;
+	text-align: right;
 }
 
 #nav ul {
@@ -88,12 +89,12 @@ body {background-size: auto;}
 }
 
 }
-
+/*C:/Users/Sam/sspread.github.io*/
 
 @media screen and (max-width: 720px){
 body	{
 	background-image: url(/unit1_projects/images/sailing2.jpg);
-	background-size: auto;
+	background-position: 100% 50%;
 
 }
 
