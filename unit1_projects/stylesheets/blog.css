@@ -1,16 +1,22 @@
 
+
 body 	{
 	font-family: "Lucida Sans Unicode", sans-serif;
 	background-color: #FFFFF0;
-	margin: 0;
+	width: 930px;
+	margin:auto;
+	color: #50310e;
 		}
 
-#headline{
+header{
+
 	border-bottom: 3px solid #05058d;
 	position: fixed;
 	width: inherit;
 	top:0;
+	margin: auto;
 	background-color: #FFFFF0;
+	z-index: 1;
 		}
 
 #name 	{
@@ -21,13 +27,13 @@ body 	{
 	color: #50310e;
 		}
 
-#nav	{
+nav	{
 	float: right;
 	margin-top: 14px;
 	font-size: 24px;
 }
 
-#nav li a{
+nav li a{
 	display: block;
 	padding-top:10px;
 	padding-right:18px;
@@ -38,60 +44,64 @@ body 	{
 	font-weight: bold;
 }
 
-#nav ul	{
+nav ul	{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	padding-right: -3px;
 		}
 
-#nav li{float: left;}	
+nav li{float: left;}	
 
-#nav a:hover{
+nav a:hover{
 	color: #FFFFF0;
 	background-color: #50310e;
+	opacity: .8;
+	border-radius: 10px;
 		}
 
-/*#page_select li{
-		color: #FFFFF0;
-		background-color: #50310e;
+body#home a#homenav,
+body#tech a#technav,
+body#wire a#wirenav,
+body#culture a#culturenav {
+	color: #FFFFF0;
+	background-color: #50310e;
+	opacity: .8;
+	border-radius: 10px;
 }
-*/
 
-#container{
-	width: 930px;
-	margin:auto;
+
+section{
+	width:90%;
 	color: #50310e;
+	margin: 10% auto;
 		}
 
-#content{
-	width:900px;
-	color: #50310e;
-	margin-top: 90px;
-	float: right;
-	padding-right: 15px;
-	padding-left: 15px;
-	text-align: justify;
-	text-justify: newspaper;
-		}
+article .text{
+	width: 49%;
+	margin: auto;
+	display: inline-block;
+	vertical-align: top;
+	padding-bottom: 3%;
 
-/*#sidebar{
-	float: left;
-	margin-top: 90px;
-	width: 400px;
-	color: inherit;
-	text-align: center;
-	padding-left: 15px;
-		}		
-*/
+}
 
-img		{
-	float: left;
-	width: 400px;
+p {text-align: justify;
+}
+
+article .image{
+	width: 49%;
 	color:inherit;
-	padding-top: 6px;
-	padding-right: 6px;
-		}
+	margin: auto;
+	vertical-align: top;
+	padding-bottom: 3%;
+	padding-left: .5%;
+	padding-right: .5%;
+}
+
+
+article {box-shadow: 4px 4px 15px #50310e;
+		padding: 1%;}
 
 .caption{
     display:inline-block;
@@ -101,36 +111,112 @@ img		{
     color: inherit;
 		}
 
-
 .blog_head h4{
 	float: right;
 	letter-spacing: 1px;
 	margin: 0;
-	padding-top: 3px;
+	margin-top: 1.2em;
 			}
 
 .blog_head h3{letter-spacing: 1px;
 		margin: 0;
+		margin-bottom: 1.2em;	
+		margin-top: 1.2em;
 		}
 
 hr 		{
-	background-color: #50310e;
-	height: 2px;
-	border: none;
+	background-color: inherit;
+	height: 1px;
+	border:none;
 	margin: 50px 25px;
-	opacity: .5;
 		}
 
-/*#footer	{
+article footer	{
 	text-align: center;
-	background-color: #50310e;
-	color: #fef5df;
-	padding-bottom: 1px;
-	font-size: 13px;
+	padding-bottom: .1em;
+	font-size: .8em;
 	width:100%;
-	position: absolute;
+	position: relative;
 	bottom:0;
 	left:0;
 	opacity: .9;
 		}
-*/
+
+
+
+
+
+@media screen and (max-width: 600px){
+
+body{
+	width: auto;
+}
+
+header{
+text-align: center;
+position: relative;
+width:98%;
+}
+
+section{
+	width:95%;
+	color: #50310e;
+	margin: 10% auto;
+		}
+
+nav {
+	float: none;
+	text-align: center;
+}
+
+nav li{
+	display: block;
+	text-align: center;
+	float: none;
+}
+nav ul {
+	margin-bottom: .8em;	
+	display: inline-block;
+}
+
+nav a {letter-spacing: 5px;}
+#name{
+	display: none;
+}
+
+article{
+	padding: 2%;
+}
+article .text{
+	width: 100%;
+	margin: auto;
+	vertical-align: top;
+	padding-bottom: 3%;
+}
+
+p {text-align: justify;
+}
+
+article .image{
+	width: 100%;
+	color:inherit;
+	margin: auto;
+	vertical-align: top;
+	padding-bottom: 3%;
+	padding-left: .5%;
+	padding-right: .5%;
+}
+
+.blog_head h4{
+	float: none;
+	letter-spacing: 2px;
+	margin: 0;
+	margin-top: 1.2em;
+			}
+
+.blog_head h3{letter-spacing: 2px;
+		margin: 0;
+		margin-bottom: 1.2em;	
+		margin-top: 1.2em;
+		}
+}
