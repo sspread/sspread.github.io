@@ -59,7 +59,8 @@ article #directions {
 
 @media screen and (max-width: 600px){
 
-#interface {width: 70%;}
+#interface {width: 70%;
+margin: auto;}
 
 article #directions{
 	width: 100%;
