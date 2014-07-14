@@ -73,7 +73,6 @@ article #game{
 	width: 100%;
 	color:inherit;
 	margin: auto;
-	vertical-align: top;
 	padding-bottom: 3%;
 	padding-left: .5%;
 	padding-right: .5%;
@@ -90,7 +89,8 @@ height: 27px;
 	padding: 0 1.5em;
 	border: dashed #50310e 2px;
 	font-weight: bold;
-	width: 280px;
-	float: left;
+	width: 275px;
+	position: relative;
+	margin: 0;
 }
 }
