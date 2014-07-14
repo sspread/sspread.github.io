@@ -6,7 +6,7 @@ body	{
 	background-color: #99ccff;
 		}
 
-#headline{
+header{
 	border-bottom: 3px solid #05058d;
 	position: absolute;
 	width:100%;
@@ -22,13 +22,13 @@ body	{
 	color: #50310e;
 		}
 
-#nav	{
+nav	{
 	float: right;
 	margin-top: 14px;
 	font-size: 24px;
 }
 
-#nav li a{
+nav li a{
 	display: block;
 	padding-top:10px;
 	padding-right:18px;
@@ -39,20 +39,23 @@ body	{
 	font-weight: bold;
 }
 
-#nav ul	{
+nav ul	{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	padding-right: 15px;
 		}
 
-#nav li{float: left;}	
+nav li{float: left;}	
 
-#nav a:hover{
+nav a:hover{
 	color: #fef5df;
 	background-color: #50310e;
 	background-size: 100% 100%;
-		}
+	opacity: .8;
+	border-radius: 10px;	
+	}
+
 
 /*#footer	{
 	text-align: center;
@@ -71,7 +74,7 @@ body	{
 @media screen and (max-width: 925px){
 body {background-size: cover;
 	background-position: 35% 0%;}
-#headline {
+header {
 	text-align: right;
 	top: 0px;
 }
@@ -80,12 +83,12 @@ body {background-size: cover;
 	margin-right: 15px;
 }
 
-#nav {
+nav {
 	float: none;
 	text-align: right;
 }
 
-#nav ul {
+nav ul {
 	display: inline-block;
 }
 
@@ -105,18 +108,18 @@ margin-right: 10px;
 
 }
 
-#headline{
+header{
 text-align: right;
 border: none;
 }
 
-#nav	{
+nav	{
 	float: right;
 	margin-top: 20px;
 	clear:both;
 }
 
-#nav li{
+nav li{
 	display: block;
 	text-align: right;
 	float: none;}	

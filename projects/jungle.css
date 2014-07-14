@@ -1,0 +1,89 @@
+table td {border: none;
+width: 32px;
+height: 32px;
+background-color: #004600;
+color: #fffff0;
+box-shadow: 5px 5px 15px #50310e;
+border-radius: 11px;
+}
+
+#joe {background-color: red;
+}
+
+#strike_spot {
+	width:100px;
+	padding-left: .36em;
+	text-align: center;
+	font-size: 1.4em;
+	margin:auto;
+	}
+
+#grenades {float:right;	
+}
+
+#health {float: right;
+}
+
+#hide{background-color: blue;
+font-weight: bold;
+padding: .8em;
+}
+
+#strike {background-color: orange;
+font-weight: bold;
+padding: .8em;
+}
+
+article #game {width:49%;
+	display: inline-table;
+	vertical-align: top;
+	margin:auto;
+}
+
+#stats {
+	padding: 0 1.5em;
+	border: dashed #50310e 2px;
+	font-weight: bold;
+	width: 70%;
+	margin: auto auto 1%;
+}
+
+article #directions {
+	vertical-align: top;
+	display: inline-block;
+	width:49%;
+}
+
+
+#directions li {padding: 3% 0;}
+
+@media screen and (max-width: 600px){
+
+article #directions{
+	width: 100%;
+	margin: auto;
+	vertical-align: top;
+	padding-bottom: 3%;
+}
+
+
+article #game{
+	width: 100%;
+	color:inherit;
+	margin: auto;
+	vertical-align: top;
+	padding-bottom: 3%;
+	padding-left: .5%;
+	padding-right: .5%;
+}
+
+#directions li {padding: 0;}
+
+#stats {
+	padding: 0 1.5em;
+	border: dashed #50310e 2px;
+	font-weight: bold;
+	width: 320px;
+	float: left;
+}
+}

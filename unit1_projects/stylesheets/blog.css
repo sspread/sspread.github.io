@@ -62,7 +62,7 @@ nav a:hover{
 
 body#home a#homenav,
 body#tech a#technav,
-body#wire a#wirenav,
+body#projects a#projectsnav,
 body#culture a#culturenav {
 	color: #FFFFF0;
 	background-color: #50310e;
