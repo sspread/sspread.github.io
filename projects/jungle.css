@@ -57,9 +57,9 @@ article #directions {
 
 #directions li {padding: 3% 0;}
 
-
-
 @media screen and (max-width: 600px){
+
+#interface {width: 70%;}
 
 article #directions{
 	width: 100%;
@@ -90,7 +90,6 @@ height: 27px;
 	border: dashed #50310e 2px;
 	font-weight: bold;
 	width: 275px;
-	position: relative;
 	margin: 0;
 }
 }
