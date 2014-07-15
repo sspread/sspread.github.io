@@ -1,15 +1,16 @@
 
 
 body 	{
-	font-family: "Lucida Sans Unicode", sans-serif;
+	font-family: "Lucida Fax", serif;
 	background-color: #FFFFF0;
 	width: 930px;
 	margin:auto;
 	color: #50310e;
 		}
 
-header{
+h1, h2, h3, h4, h5, h6, header, footer {font-family: "Lucida Sans Unicode", sans-serif}
 
+header{
 	border-bottom: 3px solid #05058d;
 	position: fixed;
 	width: inherit;
@@ -100,6 +101,18 @@ article .image{
 }
 
 
+.code {background-color: #F5DEB3;
+	color: black;
+	font-family: monospace;
+	font-weight: bold;
+	padding: 0 4px;
+	margin: 0 3px;
+}
+
+.output{color: #8C1717;}
+
+/*Media Queries*/
+
 article {box-shadow: 4px 4px 15px #50310e;
 		padding: 1%;}
 
@@ -141,9 +154,6 @@ article footer	{
 	left:0;
 	opacity: .9;
 		}
-
-
-
 
 
 @media screen and (max-width: 600px){

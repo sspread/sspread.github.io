@@ -16,14 +16,48 @@
 		<li><a href="" id="technav">Technical Blog</a></li></span>
 		<li><a href="cultural.html" id="culturenav">DBC Culture</a></li>
 		<li><a href="../projects/jungle_joe.html" id="projetsnav">Projects</a></li>
-		
 	</ul>
 </nav>
 </header>
 
-
 <section>
 
+<article>
+<span class="blog_head">
+<h4>July 14.2014</h4>
+<h3>Ruby's The Enumerables</h3>
+</span>
+
+<p>An enumerable is collection of information that is able to be enumerated. To enumerate means to process the elements in the collection, piece by piece. You might feel like an enumerable at the DMV.</p>
+
+<p>Now, Ruby has its own idea of enumerables, not unlike our English definition above. But, its a little confusing when you first learn it, as I myself am doing along with you. Let me ramble off my understanding now. This is not for you; it is for me. Ahem...</p>
+
+<p>If you ask ruby what class <i>Enumerable</i> is <span class="code">Enumerable.class</span>, it will return <span class="code output">Module</span>. It is used as a mixin in the Array class. Modules group together methods, classes and constants. Modules are similar to classes in this way, but you cannot objects based on modules. Modules provide a namespace and allow you to share the functionality of instance methods between classes (mixins). <i>Enumerator</i> is a <i>Class</i> class. The Array class returns an <i>Enumerator</i> object when no block is given to <i>#each</i>. The <i>Enumerator</i> allows us to chain methods together indefinitely, as the previous chained methods will not be given blocks.</p>
+
+<p>OK back to what we really came here to do. Let's discuss the <i>Enumerable#group_by</i> method. <i>#group_by</i> groups a collection by the criteria provided in the block. It returns a hash where each key represents a group whose values are an array containing its members.</p>
+
+<p>An example...</p>
+
+<p class="code">
+fish_names = ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]
+<br>fish_names.group_by{|name| name.length}
+<br><span class="output">=> {4=>["Nemo", "Glut", "Dory"], 5=>["Bruce", "Coral"], 6=>["Marlin", "Blenny"]}</span>
+</p>
+
+<p><i>#group_by</i> grouped the names by their length, as specified in the block. Now let's omit the block and see what ruby returns...</p>
+
+<p class="code">fish_names.group_by
+<br><span class="output">=> #(Enumerator: ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]:group_by)</span>
+</p>
+
+<p>Now we could store that <i>Enumerator</i> as a variable and save it for later. What use this <i>#group_by</i> Enumerator without any grouping criteria? I have no idea.</p>
+
+<footer>
+--- Week 4 ---
+</footer>
+
+</article>
+<hr>
 <article>
 <span class="blog_head">
 <h4>July 12.2014</h4>
