@@ -12,7 +12,7 @@ border-radius: 11px;
 
 #strike_spot {
 	width:100px;
-	padding-left: .36em;
+	padding-left: 25%;
 	text-align: center;
 	font-size: 1.4em;
 	margin:auto;
@@ -26,7 +26,13 @@ border-radius: 11px;
 
 #hide{background-color: blue;
 font-weight: bold;
-padding: .8em;
+font-family: inherit;
+font-size: 1.2em;
+width:80px;
+float:left;
+margin: 0 2%;
+padding: 2% ;
+height: 40px;
 }
 
 #strike {background-color: orange;
@@ -44,9 +50,12 @@ article #game {width:49%;
 	padding: 0 1.5em;
 	border: dashed #50310e 2px;
 	font-weight: bold;
-	width: 70%;
+	width: 170px;
 	margin: auto auto 1%;
+	position: relative;
+	left: 40px;
 }
+
 
 article #directions {
 	vertical-align: top;
@@ -59,8 +68,6 @@ article #directions {
 
 @media screen and (max-width: 600px){
 
-#interface {width: 70%;
-margin: auto;}
 
 article #directions{
 	width: 100%;
@@ -71,7 +78,7 @@ article #directions{
 
 
 article #game{
-	width: 100%;
+	width: 360px;
 	color:inherit;
 	margin: auto;
 	padding-bottom: 3%;
@@ -80,17 +87,16 @@ article #game{
 }
 
 table td {
-width: 27px;
-height: 27px;
+	height: 27px:;
+	width: 27px;
 }
 
 #directions li {padding: 0;}
 
 #stats {
-	padding: 0 1.5em;
-	border: dashed #50310e 2px;
-	font-weight: bold;
-	width: 275px;
-	margin: 0;
+	position: relative;
+	left: 30px;
 }
+
+
 }

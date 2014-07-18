@@ -29,11 +29,12 @@ reveal = function() {document.getElementById(joe.location).innerHTML = ("<b id='
 
 var player = {
 	grenades: 4,
-	strike: function() {
+	strike: function(strikeCoords) {
 
 		// set grenade coordinates per user selection
-		var strikeX = document.getElementById("selectXCoord").options[document.getElementById("selectXCoord").selectedIndex].text
-		var strikeY = document.getElementById("selectYCoord").options[document.getElementById("selectYCoord").selectedIndex].text
+
+		var strikeX = parseInt(strikeCoords.charAt(0))
+		var strikeY = parseInt(strikeCoords.charAt(1))
 
 		// inflict damage (global) to joe's health based on grenade proximty
 		damage=0
@@ -42,7 +43,6 @@ var player = {
 		}
 		joe.health-=damage
 		document.getElementById("health").innerHTML = (joe.health)
-		var strikeCoords=(strikeX.toString()+strikeY.toString())
 		document.getElementById(strikeCoords).innerHTML=("<b id='strike_spot'>" + damage +"</b>")
 		this.grenades-=1
 		document.getElementById("grenades").innerHTML = (this.grenades)
