@@ -110,7 +110,6 @@ article .image{
 
 .output{color: #8C1717;}
 
-/*Media Queries*/
 
 article {box-shadow: 4px 4px 15px #50310e;
 		padding: 1%;}
@@ -154,6 +153,7 @@ article footer	{
 	opacity: .9;
 		}
 
+/*Media Queries*/
 
 @media screen and (max-width: 600px){
 
