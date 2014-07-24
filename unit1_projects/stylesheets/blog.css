@@ -18,7 +18,6 @@ article {box-shadow: 4px 4px 15px #1A1A00;
 header{
 	border-bottom: 3px solid #008FB2;
 	position: fixed;
-	-webkit-backface-visibility: hidden;
 	width: inherit;
 	top:0;
 	margin: auto;
