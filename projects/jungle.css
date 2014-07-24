@@ -24,7 +24,7 @@ border-radius: 11px;
 #health {float: right;
 }
 
-#hide{background-color: blue;
+#hide{
 font-weight: bold;
 font-family: inherit;
 font-size: 1.2em;
@@ -33,6 +33,9 @@ float:left;
 margin: 0 2%;
 padding: 2% ;
 height: 40px;
+color: #F0F0EB;
+background-color: #003D4C;
+border-radius: 8px;
 }
 
 #strike {background-color: orange;
@@ -54,6 +57,7 @@ article #game {width:49%;
 	margin: auto auto 1%;
 	position: relative;
 	left: 40px;
+	border-radius: 8px;
 }
 
 
@@ -88,7 +92,7 @@ article #game{
 
 table td {
 	height: 27px:;
-	width: 27px;
+	width: 30px;
 }
 
 #directions li {padding: 0;}
