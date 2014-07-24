@@ -84,7 +84,12 @@ article .text{
 	display: inline-block;
 	vertical-align: top;
 	padding-bottom: 3%;
+}
 
+.image_full{
+	width: 85%;
+	display: block;
+	margin: auto;
 }
 
 p {text-align: justify;
@@ -216,6 +221,9 @@ article .image{
 	padding-right: .5%;
 }
 
+.image_full{
+	width: 100%;
+}
 .blog_head h4{
 	float: none;
 	letter-spacing: 2px;

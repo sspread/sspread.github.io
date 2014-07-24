@@ -24,6 +24,58 @@
 
 <article>
 <span class="blog_head">
+<h4>July 23.2014</h4>
+<h3>Dealing a Poker Hand in Ruby</h3>
+</span>
+
+<p>In this piece, I'm going to run through a short Ruby program I wrote to deal a hand of poker. I will discuss classes and instance variables, among other concepts. Let's take it step by step.</p>
+
+<img class="image_full" src="../unit1_projects/images/poker_initialize.png">
+
+<p> First, we must define a new <span class="code">class PokerHand</span> as a blueprint to contain our methods and characterisics pertaining to a hand of poker. The first method in a new class is always going to be <span class="code">#initialize</span>.  When you create a new instance of the class PokerHand (i.e. an individual hand), you call <span class="code">#new</span> on the class, which automatically looks for and executes <span class="code">#initialize</span> within the class definition. Let's do that now.</p>
+
+<p span class="code">
+hand1=PokerHand.new(5)
+<br><span class="output">=> There are 5 players.</span>
+</P>
+
+<p>We put a <span class="code">5</span> as the argument when creating the new class, which is interpreted by <span class="code">#initialize</span> as the number of players in our game. Behind the scenes, <span class="code">#initialize</span> also created a deck of cards, shuffled them, and dealt two to each player! I know, you want to see what you were dealt, right? Let's write another method to access the array value of the <span class="code">:hero</span> hash key.</p>
+
+<img class="image_full" src="../unit1_projects/images/poker_hero_hand.png">
+<br>
+<p span class="code">
+hand1.hero_hand
+<br><span class="output">=> Your hand is ["6c", "6s"]</span>
+</p>
+
+<p>Not bad, pocket 6's! See the '@' attached to our <span class="code">@players</span> hash variable? That makes it an <i>instance variable</i> that our program can access across methods in our new PokerHand class, so long as it pertains to the same instance (i.e. <span class="code">hand1</span>). Let's skip the betting for now and see a flop!</p>
+
+<img class="image_full" src="../unit1_projects/images/poker_flop.png">
+<br>
+<p span class="code">
+hand1.flop
+<br><span class="output">=> Flop: ["Ac", "3s", "Jc"]</span>
+</p>
+
+<p>Probably not the flop we wanted to see, but our program is working! Let's write one more method to see our opponent's hands.</p>
+
+<img class="image_full" src="../unit1_projects/images/poker_villain_hand.png">
+<br>
+<p span class="code">
+hand1.villain_hand(:two)
+<br><span class="output">=> private method 'villain_hand' called for #(PokerHand:0x2c92248) (NoMethodError)</span>
+</p>
+
+<p>Not so fast! I told Ruby that <span class="code">#villain_hand</span> is <span class="code">private</span>. This means that only our program can access this method and see player two's hand (or any of our opponent's hands, for that matter). We might have our program call this private method later on when we extend it to find out who wins, but that's for another day.</p>
+
+<footer>
+--- Week 5 ---
+</footer>
+</article>
+<hr>
+
+<article>
+<span class="blog_head">
 <h4>July 14.2014</h4>
 <h3>Ruby's The Enumerables</h3>
 </span>
@@ -61,7 +113,7 @@ fish_names = ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]
 <article>
 <span class="blog_head">
 <h4>July 12.2014</h4>
-<h3>JAVASCRIPT in WEB DEVELOPMENT</h3>
+<h3>JavaScript in Web Development</h3>
 </span>
 
 <img class = "image" src="../unit1_projects/images/javascript.jpg" style="width:19%; padding:0;">
@@ -102,7 +154,7 @@ fish_names = ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]
 <article>
 <span class="blog_head">
 <h4>July 6.2014</h4>
-<h3>LEARNING CSS - PADDING, BORDER and MARGIN</h3>
+<h3>Learning CSS - Padding, Border and Margin</h3>
 </span>
 
 <img class = "image" src="../unit1_projects/images/margin.jpg" style="float: left; padding-bottom:0;">
@@ -139,7 +191,7 @@ Finally, the thickness of each layer begins at the inner layer and extends outwa
 <article>
 <span class="blog_head">
 <h4>June 30.2014</h4>
-<h3>WEBSITES - WIREFRAMED</h3>
+<h3>Websites - Wireframed</h3>
 </span>
 <p> A wireframe is a simplified blueprint of a screen design. Check out the wireframe versions of the websites I mentioned on my Technical Blog page. Click the image for a bigger version.</p>
 
@@ -172,7 +224,7 @@ Finally, the thickness of each layer begins at the inner layer and extends outwa
 <article>
 <span class="blog_head">
 <h4>June 29.2014</h4>
-<h3>WEBSITES WORTH A VISIT</h3>
+<h3>Websites Worth a Visit</h3>
 </span>
 
 <a href="http://www.spotify.com" target="_blank">
