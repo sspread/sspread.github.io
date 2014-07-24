@@ -82,7 +82,7 @@ article #directions{
 
 
 article #game{
-	width: 360px;
+	width: 380px;
 	color:inherit;
 	margin: auto;
 	padding-bottom: 3%;
@@ -92,7 +92,7 @@ article #game{
 
 table td {
 	height: 27px:;
-	width: 30px;
+	width: 27px;
 }
 
 #directions li {padding: 0;}
