@@ -1,5 +1,5 @@
 body	{
-	background: url(/unit1_projects/images/sailing.jpg) no-repeat center fixed;
+	background: url(unit1_projects/images/sailing.jpg) no-repeat center fixed;
 	background-size: cover;
 
 	font-family: "Lucida Sans Unicode", sans-serif;
@@ -12,6 +12,7 @@ header{
 	width:100%;
 	top: 25px;
 	left:0;
+	color: #003D4C;
 		}
 
 #name 	{
@@ -19,7 +20,7 @@ header{
 	padding-left: 15px;
 	padding-top: 0;
 	font-size: 48px;
-	color: #50310e;
+	color: inherit;
 		}
 
 nav	{
@@ -35,7 +36,7 @@ nav li a{
 	padding-left:18px;
 	padding-bottom: 8px;
 	text-decoration: none;
-	color:#50310e;
+	color: inherit;
 	font-weight: bold;
 }
 
@@ -49,8 +50,8 @@ nav ul	{
 nav li{float: left;}	
 
 nav a:hover{
-	color: #fef5df;
-	background-color: #50310e;
+	color: #F0F0EB;
+	background-color: #003D4C;
 	background-size: 100% 100%;
 	opacity: .8;
 	border-radius: 10px;	

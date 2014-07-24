@@ -4,6 +4,7 @@
 <title>Boatz'n'Blogz</title>
 <link rel="stylesheet" type="text/css" href="../unit1_projects/stylesheets/blog.css">
 <meta name="viewport" content="width=device-width">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body id="tech">
@@ -23,11 +24,14 @@
 <section>
 
 <article>
+<a href="#" id="post_link6">
 <span class="blog_head">
 <h4>July 23.2014</h4>
 <h3>Dealing a Poker Hand in Ruby</h3>
 </span>
+</a>
 
+<span class="post 6" style="display:none;">
 <p>In this piece, I'm going to run through a short Ruby program I wrote to deal a hand of poker. I will discuss classes and instance variables, among other concepts. Let's take it step by step.</p>
 
 <img class="image_full" src="../unit1_projects/images/poker_initialize.PNG">
@@ -71,15 +75,19 @@ hand1.villain_hand(:two)
 <footer>
 --- Week 5 ---
 </footer>
+</span>
 </article>
 <hr>
 
 <article>
+<a href="#" id="post_link5">
 <span class="blog_head">
 <h4>July 14.2014</h4>
 <h3>Ruby's The Enumerables</h3>
 </span>
+</a>
 
+<span class="post 5" style="display:none;">
 <p>An enumerable is collection of information that is able to be enumerated. To enumerate means to process the elements in the collection, piece by piece. You might feel like an enumerable at the DMV.</p>
 
 <p>Now, Ruby has its own idea of enumerables, not unlike our English definition above. But, it's a little confusing when you first learn it, as I myself am doing along with you. Let me ramble off my understanding now. This is not for you; it is for me. Ahem...</p>
@@ -107,15 +115,18 @@ fish_names = ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]
 <footer>
 --- Week 4 ---
 </footer>
-
+</span>
 </article>
 <hr>
 <article>
+<a href="#" id="post_link4">
 <span class="blog_head">
 <h4>July 12.2014</h4>
 <h3>JavaScript in Web Development</h3>
 </span>
+</a>
 
+<span class="post 4" style="display:none;">
 <img class = "image" src="../unit1_projects/images/javascript.jpg" style="width:19%; padding:0;">
 
 <p class="text" style="width:79%; padding:0;">
@@ -147,16 +158,20 @@ fish_names = ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]
 <footer>
 --- Week 3 ---
 </footer>
+</span>
 </article>
 
 <hr>
 
 <article>
+<a href="#" id="post_link3">
 <span class="blog_head">
 <h4>July 6.2014</h4>
 <h3>Learning CSS - Padding, Border and Margin</h3>
 </span>
+</a>
 
+<span class="post 3" style="display:none;">
 <img class = "image" src="../unit1_projects/images/margin.jpg" style="float: left; padding-bottom:0;">
 
 <p class="text" style="padding:0;">
@@ -184,15 +199,19 @@ Finally, the thickness of each layer begins at the inner layer and extends outwa
 <footer>
 --- Week 2 ---
 </footer>
-
+</span>
 </article>
 <hr>
 
 <article>
+<a href="#" id="post_link2">
 <span class="blog_head">
 <h4>June 30.2014</h4>
 <h3>Websites - Wireframed</h3>
 </span>
+</a>
+
+<span class="post 2" style="display:none;">
 <p> A wireframe is a simplified blueprint of a screen design. Check out the wireframe versions of the websites I mentioned on my Technical Blog page. Click the image for a bigger version.</p>
 
 <a href="../unit1_projects/images/spotify_wire.png" target="_blank">
@@ -216,17 +235,20 @@ Finally, the thickness of each layer begins at the inner layer and extends outwa
 <footer>
 --- Week 1 ---
 </footer>
-
+</span>
 </article>
 
 <hr>
 
 <article>
+<a href="#" id="post_link1">
 <span class="blog_head">
 <h4>June 29.2014</h4>
 <h3>Websites Worth a Visit</h3>
 </span>
+</a>
 
+<span class="post 1" style="display:none;">
 <a href="http://www.spotify.com" target="_blank">
 <img class="image" src="../unit1_projects/images/spotify.jpg"></a>
 <p class="text">
@@ -247,10 +269,11 @@ Finally, the thickness of each layer begins at the inner layer and extends outwa
 <footer>
 --- Week 1 ---
 </footer>
+</span>
 </article>
 
 </section>
-
+<script src="../scripts/posttoggle.js"></script>
 </body>
 
 </html>
