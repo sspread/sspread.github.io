@@ -30,7 +30,7 @@
 
 <p>In this piece, I'm going to run through a short Ruby program I wrote to deal a hand of poker. I will discuss classes and instance variables, among other concepts. Let's take it step by step.</p>
 
-<img class="image_full" src="../unit1_projects/images/poker_initialize.png">
+<img class="image_full" src="../unit1_projects/images/poker_initialize.PNG">
 
 <p> First, we must define a new <span class="code">class PokerHand</span> as a blueprint to contain our methods and characterisics pertaining to a hand of poker. The first method in a new class is always going to be <span class="code">#initialize</span>.  When you create a new instance of the class PokerHand (i.e. an individual hand), you call <span class="code">#new</span> on the class, which automatically looks for and executes <span class="code">#initialize</span> within the class definition. Let's do that now.</p>
 
@@ -41,7 +41,7 @@ hand1=PokerHand.new(5)
 
 <p>We put a <span class="code">5</span> as the argument when creating the new class, which is interpreted by <span class="code">#initialize</span> as the number of players in our game. Behind the scenes, <span class="code">#initialize</span> also created a deck of cards, shuffled them, and dealt two to each player! I know, you want to see what you were dealt, right? Let's write another method to access the array value of the <span class="code">:hero</span> hash key.</p>
 
-<img class="image_full" src="../unit1_projects/images/poker_hero_hand.png">
+<img class="image_full" src="../unit1_projects/images/poker_hero_hand.PNG">
 <br>
 <p span class="code">
 hand1.hero_hand
@@ -50,7 +50,7 @@ hand1.hero_hand
 
 <p>Not bad, pocket 6's! See the '@' attached to our <span class="code">@players</span> hash variable? That makes it an <i>instance variable</i> that our program can access across methods in our new PokerHand class, so long as it pertains to the same instance (i.e. <span class="code">hand1</span>). Let's skip the betting for now and see a flop!</p>
 
-<img class="image_full" src="../unit1_projects/images/poker_flop.png">
+<img class="image_full" src="../unit1_projects/images/poker_flop.PNG">
 <br>
 <p span class="code">
 hand1.flop
@@ -59,7 +59,7 @@ hand1.flop
 
 <p>Probably not the flop we wanted to see, but our program is working! Let's write one more method to see our opponent's hands.</p>
 
-<img class="image_full" src="../unit1_projects/images/poker_villain_hand.png">
+<img class="image_full" src="../unit1_projects/images/poker_villain_hand.PNG">
 <br>
 <p span class="code">
 hand1.villain_hand(:two)
