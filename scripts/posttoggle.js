@@ -27,3 +27,8 @@ $("#post_link1").click(function() {
 	event.preventDefault();
   $( ".post.1" ).slideToggle( "slow" );
 });
+
+$("#comment_box_link").click(function() {
+	event.preventDefault();
+  $( ".comment_box" ).slideToggle( "slow" );
+});

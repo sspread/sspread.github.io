@@ -89,7 +89,7 @@ article a {text-decoration: none;
 section{
 	width:90%;
 	color: #1A1A00;
-	margin: 10% auto;
+	margin: 10% 5% auto;
 }
 
 article .text{
@@ -172,6 +172,9 @@ article footer	{
 	opacity: .9;
 }
 
+.comment_box {width:100%;}
+#comment_article {border: solid #ffd700 2px;}
+#comment_section {margin: 5% auto; }
 
 /*Media Queries*/
 

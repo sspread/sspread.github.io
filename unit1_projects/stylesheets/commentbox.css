@@ -1,14 +1,13 @@
 
 #HCB_comment_box textarea {
   /* add any custom CSS for the comment box here. */
-  
 }
 
 /* the entire html comment box container. applies to everything */
 #HCB_comment_box {
-  font-family: verdana, serif;
-  color: #888;
-  background-color: #fff;
+  /*font-family: verdana, serif;*/
+  /*color: #888;*/
+  /*background-color: #fff;*/
 }
 
 #HCB_comment_box p.error {
@@ -46,15 +45,19 @@
   border-left: 1px solid #eee;
   border-bottom: 1px solid #888;
   border-right: 1px solid #888;
-  background-color: #ccc;
-  color: #666;
+  background-color: #B39700;
+  border-radius: 8px;
+  color: #F0F0EB;
+  opacity: .8;
   font-weight:bold;
   cursor:pointer;
+  font-family: "Lucida Sans Unicode", sans-serif;
 }
 
 #HCB_comment_box span.home-desc {
   font-size:10px;
   opacity:0.4;
+  display: none;
 }
 
 /* the individual comment display containers */
@@ -73,3 +76,9 @@
   color:blue;
   text-decoration:underline;
 }
+
+/*tags styled by me*/
+#HCB_comment_box h3 {display: none;}
+#HCB_comment_box #comments_list {font-size: .9em;}
+#hcb_msg {margin: 5px;}
+#HCB_comment_box a {display: none;}
