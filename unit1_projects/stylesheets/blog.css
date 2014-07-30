@@ -119,13 +119,13 @@ article .image{
 }
 
 
-.code {background-color: #FFFFFF;
+.code {background-color: #f8f8f8;
 	color: black;
 	font-family: monospace;
 	font-weight: bold;
-	padding: 0 4px;
+	padding: 1px 4px;
 	margin: 0 3px;
-	border: solid black .5px;
+	box-shadow: inset 0 0 2px #5C85D6;
 }
 
 .output{color: #cf1717;}

@@ -26,6 +26,107 @@
 <section>
 
 <article>
+<a href="#" id="post_link7">
+<span class="blog_head">
+<h4>July 29.2014</h4>
+<h3>Block Party</h3>
+</span>
+</a>
+
+<span class="post 7" style="display:;">
+
+<p>Blocks, Procs and lambdas are instrumental function syntax in Ruby. After doing some due dilligence, I find it proper to extend to you my basic understanding of these guys. The differences between these <i>closures</i> are rather subtle and I sometimes wish there was only one type. But there are at least three. All three belong to the <span class="code">Proc</span> class, as in <i>proc</i>edure. This is very important.</p>
+
+<h4>Blocks</h4>
+<p>Blocks are syntax literals for Proc objects. As such, you can create a block with curlies <span class="code">{}</span> (single line) or with <span class="code">do...end</span>. The code example below illustrates two ways to call the block from a method, and feed it an argument.</p>
+
+<img class="image_full" src="../unit1_projects/images/blocks.PNG">
+<br>
+<p class="code">
+block_call {|n| puts "I'm in the #{n}."}
+<span class="output">
+<br>=> I'm before the block.
+<br>=> I'm in the block.
+<br>=> I'm after the block.
+</span>
+</p>
+
+<p>Blocks are easy to code on the fly, but there's another way to create Procs that allows us to save our snippets to objects.</p>
+
+<h4>Procs</h4>
+<p>Although blocks actually are Procs, Procs behave a little differently when explicitly created with <span class="code">Proc.new</span>.</p>
+
+<img class="image_full" src="../unit1_projects/images/procs.PNG">
+<br>
+<p class="code">
+proc_call(where_r_u)
+<br>puts
+<br>proc_call_vip(where_r_u)
+<span class="output">
+<br>=> I'm before the proc.
+<br>=> I'm in the proc, dummy!
+<br>=> I'm in the proc, fool!
+<br>=> I'm in the proc, doofus!
+<br>=> I'm after the proc.
+<br>=> 
+<br>=> I'm before the proc.
+<br>=> I'm in the VIP section, dummy!
+<br>=> I'm in the VIP section, fool!
+<br>=> I'm in the VIP section, doofus!
+<br>=> I'm after the proc.
+</span>
+</p>
+
+<p>Our <span class="code">where_r_u</span> Proc is a little rude, but he's DRY because we only have to define him once and can use him forever.</p>
+
+<h4>Lambdas</h4>
+<p>Finally, creating a Proc with the keyword <span class="code">lambda</span> makes for even a slightly different Proc. Lambdas have two key differences from the Procs I described above. The first is that a lambda actually cares about the number of arguments passed to it. &iexcl;Mira!</p>
+
+<p class="code">
+proq = proc {|x,y| "#{x} y #{y}"}
+<br>lamb = lambda {|x,y| "#{x} y #{y}"}
+<br>
+<br>puts proq.call('uno','dos')
+<br><span class="output">=> uno y dos</span>
+<br>puts proq.call('uno')
+<br><span class="output">=> uno y </span>
+<br>puts lamb.call('uno','dos')
+<br><span class="output">=> uno y dos</span>
+<br>puts lamb.call('uno')
+<br><span class="output">=> 'block in (main)': wrong number of arguments (1 for 2) (ArgumentError)</span>
+</p>
+
+<p>On second thought, using Spanish with these particular variable letters may have added unfair befuddlement to this example, but I hope you get it. <span class="code">lambda</span> will throw a fuss if you neglect an argument, and <span class="code">Proc.new</span> (equivalent to <span class="code">proc</span>) will throw your shit into a bag and push it down the stairs. Because it don't care.</p>
+
+<p>The other difference is in the way lambdas and Procs treat <span class="code">return</span>. <span class="code">lambda</span> returns only from itself, while <span class="code">proc</span> returns from itself <i>and</i>  from the method from whence it came. Looksee!</p>
+
+<img class="image_full" src="../unit1_projects/images/return.PNG">
+<br>
+<p class="code">
+puts who_r_u ima_lambda
+<br>puts
+<br>puts who_r_u ima_lambda, 1
+<span class="output">
+<br>=> Who are you Procs?
+<br>=> I'm a lamb, duh!
+<br>=> Who's your friend?
+<br>=> I'm a Proc!
+<br>=> 
+<br>=> Who are you Procs?
+<br>=> I'm a Proc!
+</span>
+</p>
+
+<p>When the lambda is executed first within <span class="code">#who_r_u</span>, the rest of the method's code is executed. However, when the Proc is executed first, its <span class="code">return</span> skips the remainder of the method's code. Also worth noting in this example, Ruby does not allow arguments containing <span class="code">return</span>, so I had to define <span class="code">ima_proc</span> within our method. However, lambdas can magically get away with it, so <span class="code">ima_lambda</span> is defined outside the method and passed in as an argument.</p>
+
+<p>And that's all I have for you.</p>
+
+<footer>--- Week 6 ---</footer>
+</span>
+</article>
+<hr>
+
+<article>
 <a href="#" id="post_link6">
 <span class="blog_head">
 <h4>July 23.2014</h4>
@@ -40,10 +141,10 @@
 
 <p> First, we must define a new <span class="code">class PokerHand</span> as a blueprint to contain our methods and characterisics pertaining to a hand of poker. The first method in a new class is always going to be <span class="code">#initialize</span>.  When you create a new instance of the class PokerHand (i.e. an individual hand), you call <span class="code">#new</span> on the class, which automatically looks for and executes <span class="code">#initialize</span> within the class definition. Let's do that now.</p>
 
-<p span class="code">
+<p class="code">
 hand1=PokerHand.new(5)
 <br><span class="output">=> There are 5 players.</span>
-</P>
+</p>
 
 <p>We put a <span class="code">5</span> as the argument when creating the new class, which is interpreted by <span class="code">#initialize</span> as the number of players in our game. Behind the scenes, <span class="code">#initialize</span> also created a deck of cards, shuffled them, and dealt two to each player! I know, you want to see what you were dealt, right? Let's write another method to access the array value of the <span class="code">:hero</span> hash key.</p>
 
@@ -58,7 +159,7 @@ hand1.hero_hand
 
 <img class="image_full" src="../unit1_projects/images/poker_flop.PNG">
 <br>
-<p span class="code">
+<p class="code">
 hand1.flop
 <br><span class="output">=> Flop: ["Ac", "3s", "Jc"]</span>
 </p>
@@ -67,7 +168,7 @@ hand1.flop
 
 <img class="image_full" src="../unit1_projects/images/poker_villain_hand.PNG">
 <br>
-<p span class="code">
+<p class="code">
 hand1.villain_hand(:two)
 <br><span class="output">=> private method 'villain_hand' called for #(PokerHand:0x2c92248) (NoMethodError)</span>
 </p>
