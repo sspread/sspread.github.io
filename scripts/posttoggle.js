@@ -1,3 +1,15 @@
+$(function () {
+   $("img").not(":visible").each(function () {
+       $(this).data("src", this.src);
+       this.src = "";
+   });
+
+   var reveal = function (selector) {
+       var img = $(selector);
+       img[0].src = img.data("src");
+   }
+});
+
 $("#post_link6").click(function() {
 	event.preventDefault();
   $( ".post.6" ).slideToggle( "slow" );
