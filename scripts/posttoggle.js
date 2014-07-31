@@ -10,6 +10,11 @@
 //    }
 // });
 
+$("#post_link7").click(function() {
+	event.preventDefault();
+  $( ".post.7" ).slideToggle( "slow" );
+});
+
 $("#post_link6").click(function() {
 	event.preventDefault();
   $( ".post.6" ).slideToggle( "slow" );
