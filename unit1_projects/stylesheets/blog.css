@@ -6,7 +6,7 @@ body 	{
 
 }
 
-h1, h2, h3, h4, h5, h6, header, footer {font-family: "Lucida Sans Unicode", sans-serif}
+h1, h2, h3, h4, h5, h6, th, header, footer {font-family: "Lucida Sans Unicode", sans-serif}
 
 article {box-shadow: 4px 4px 15px #1A1A00;
 		padding: 1%;
@@ -176,7 +176,20 @@ article footer	{
 #comment_article {border: solid #ffd700 4px;}
 #comment_section {margin: 9% auto; }
 
-/*Media Queries*/
+table {margin: auto;
+	border-radius: 15px;
+	text-align: center;
+	border: solid purple 2px;
+	width: 45%;
+	}
+
+
+.values td {
+	font-size: .95em;
+	}
+
+
+/*---------------Media Queries-----------------*/
 
 @media screen and (max-width: 600px){
 
