@@ -176,17 +176,14 @@ article footer	{
 #comment_article {border: solid #ffd700 4px;}
 #comment_section {margin: 9% auto; }
 
-table {margin: auto;
+.values {margin: auto;
 	border-radius: 15px;
 	text-align: center;
 	border: solid purple 2px;
 	width: 45%;
 	}
 
-
-.values td {
-	font-size: .95em;
-	}
+.values td {font-size: .95em;}
 
 
 /*---------------Media Queries-----------------*/
