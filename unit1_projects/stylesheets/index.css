@@ -1,8 +1,5 @@
 body	{
-	background-image: url(/unit1_projects/images/108a.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
+	background: url(/unit1_projects/images/108a.jpg) no-repeat center center fixed;
 	webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
