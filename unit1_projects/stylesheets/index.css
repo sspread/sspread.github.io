@@ -1,6 +1,9 @@
 body	{
 	background: url(/unit1_projects/images/108a.jpg) no-repeat center fixed;
-	background-size: cover;
+	webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	background-position: 100% 0px;
 	font-family: "Beantown", "Lucida Sans Unicode", sans-serif;
 	background-color: #0099ff;
@@ -90,6 +93,8 @@ nav li{
 	text-align: left;
 	float: none;}	
 }
+
+
 
 @media screen and (max-width: 600px){
 
