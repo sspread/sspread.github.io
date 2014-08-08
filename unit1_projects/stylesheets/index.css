@@ -1,40 +1,43 @@
 body	{
-	background: url(/unit1_projects/images/sailing.jpg) no-repeat center fixed;
+	background: url(/unit1_projects/images/108a.jpg) no-repeat center fixed;
 	background-size: cover;
-
-	font-family: "Lucida Sans Unicode", sans-serif;
-	background-color: #99ccff;
+	background-position: 100% 0px;
+	font-family: "Beantown", "Lucida Sans Unicode", sans-serif;
+	background-color: #0099ff;
 		}
 
 header{
-	border-bottom: 3px solid #05058d;
 	position: absolute;
 	width:100%;
+	left: 0;
 	top: 25px;
-	left:0;
-	color: #003D4C;
+	color: #ffecff;
+	font-style: italic;
 		}
 
 #name 	{
 	float: left;
-	padding-left: 15px;
+	margin-left: 25px;
 	padding-top: 0;
-	font-size: 48px;
+	font-size: 2.7em;
 	color: inherit;
+	letter-spacing: 2px;
+	text-shadow: -5px -5px 7px #2E2E6C;
 		}
 
 nav	{
 	float: right;
-	margin-top: 14px;
-	font-size: 24px;
+	font-size: 1.1em;
+	letter-spacing: 2px;
+	margin-right: 5px;
+	text-align: bottom;
+	text-shadow: 5px -5px 7px #002952;
 }
 
 nav li a{
 	display: block;
-	padding-top:10px;
-	padding-right:18px;
-	padding-left:18px;
-	padding-bottom: 8px;
+	margin: 0;
+	padding: 15px 20px;
 	text-decoration: none;
 	color: inherit;
 	font-weight: bold;
@@ -50,78 +53,54 @@ nav ul	{
 nav li{float: left;}	
 
 nav a:hover{
-	color: #F0F0EB;
-	background-color: #003D4C;
-	background-size: 100% 100%;
-	opacity: .8;
-	border-radius: 10px;	
+	color: #002952 ;
+	text-shadow: 0px 0px 15px #ffefff;
 	}
 
-
-/*#footer	{
-	text-align: center;
-	background-color: #50310e;
-	color: #fef5df;
-	padding-bottom: 1px;
-	font-size: 13px;
-	width:100%;
-	position: absolute;
-	bottom:0;
-	left:0;
-	opacity: .9;
-		}
-*/
-
-@media screen and (max-width: 925px){
-body {background-size: cover;
-	background-position: 35% 0%;}
-header {
-	text-align: right;
-	top: 0px;
+@font-face {
+	font-family: Beantown;
+	src: url(/fonts/beantown/Beantown.ttf);
 }
+
+@media screen and (max-width: 1080px){
+
+header {
+	text-align: left;
+}
+
 #name{
 	float: none;
-	margin-right: 15px;
+	text-shadow: 0px -5px 7px #2E2E6C;
 }
 
 nav {
-	float: none;
-	text-align: right;
+	text-align: left;
+	float: left;
+	clear:both;
+	margin-left: 5px;
+	text-shadow: -3px 0px 7px #2E2E6C;
 }
 
 nav ul {
 	display: inline-block;
 }
 
-}
-
-
-@media screen and (max-width: 600px){
-body	{
-	background-image: url(/unit1_projects/images/sailing2.jpg);
-	background-size: auto;
-	background-position: 45% 20%;
-}
-
-#name{
-float: right;
-margin-right: 10px;
-
-}
-
-header{
-text-align: right;
-border: none;
-}
-
-nav	{
-	float: right;
-	margin-top: 20px;
-	clear:both;
-}
-
 nav li{
 	display: block;
-	text-align: right;
+	text-align: left;
 	float: none;}	
+}
+
+@media screen and (max-width: 600px){
+
+#name{
+	text-shadow: 5px -5px 7px #2E2E6C;
+	}
+
+nav {
+	text-align: left;
+	float: left;
+	clear:both;
+	text-shadow: 2px -3px 7px #2E2E6C;
+}
 }
