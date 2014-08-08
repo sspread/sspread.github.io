@@ -1,5 +1,5 @@
 body	{
-	background: url(/unit1_projects/images/108a.jpg) no-repeat center center fixed;
+	background: url(/unit1_projects/images/108a.jpg) no-repeat fixed;
 	webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -99,12 +99,14 @@ nav li{
 @media screen and (max-width: 600px){
 body	{
 	/*background-image: url(/unit1_projects/images/108a.jpg);*/
+	background-attachment: scroll;
 	background-size: auto;
-	/*background-position: 45% 20%;*/
+	/*background-position: 100% 0%;*/
 }
 
 #name{
 	text-shadow: 5px -5px 7px #2E2E6C;
+	t
 	}
 
 nav {
