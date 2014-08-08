@@ -26,6 +26,56 @@
 <section>
 
 <article>
+<a href="#" id="post_link8">
+<span class="blog_head">
+<h4>August 7.2014</h4>
+<h3>SQL and the Seek to Know NoSQL</h3>
+</span>
+</a>
+
+<span class="post 8" style="display:;">
+
+<p>SQL and NoSQL are different types of databases. SQL has been around since the 1970's and remains the dominant database structure. The term NoSQL ("Not Only SQL") was coined in 1998 and seeks to compliment SQL where it falls short. The big difference between the two is that SQL is relational and NoSQL is not. While there is much more to the story, I'm going to run with this idea for the benefit of high level comparison.</p>
+
+<h4>SQL</h4>
+<p>A relational database is one that stores information in a two-dimensional table format. Think about an Excel spreadsheet. The columns represent data fields, or attributes. The rows represent records that fill in the information for each field. For example a 'users' table, or relation, might hold fields for 'name', 'email' and 'dob'. Each row would be an individual user, uniquely identified by a primary key 'id' field. But that's not all. There could be another table with another set of attributes that relate to the original 'users' table. Maybe a schema example will illustrate more clearly.</p>
+
+<img class="image" src="../unit1_projects/images/twitter_schema.PNG" style="padding-bottom:0;">
+<p class="text">
+This theoretical Twitter database schema represents a one-to-many relationship between two tables. Each unique user can write many tweets. Each unique tweet relates to one unique user. Many-to-many and one-to-one relationships also exist between tables, and all three relationships can be present in one schema. As you can imagine, this web of relations can get complicated in big data applications. SQL's scalability drawback has coaxed NoSQL into existence. But before we discuss that, let's look at a key feature of SQL.</p>
+
+<p>In addition to offering an intuitive framework for storing data, SQL offers excellent data integrity, which is defined as having ACID:
+<ul>
+	<li><b>Atomicity</b> - All fields are updated at once, or none are updated at all.</li>
+	<li><b>Consistency</b> - All transactions transform the state according to the integrity constraints in place.</li>
+	<li><b>Isolation</b> - Multiple operations in a single transaction (i.e. updating multiple fields for a single record) do not intermingle in time with other transaction operations.</li>
+	<li><b>Durability</b> - Completed transactions are safely and reliably stored on a hard drive.</li>
+</ul>
+</p>
+
+<h4>NoSQL</h4>
+<p>The fact is, social media generates bigillafucks of data every day. As opposed to scaling <i>up</i> a SQL database by adding memory and faster hardware, NoSQL scales <i>out</i> by spreading the load over many commodity systems. It's design is relatively simple and cost effective. While SQL relational databases are birds of a feather, there are four types of NoSQL databases:
+<ul>
+	<li><b>Key-values Stores</b> - Unique keys point to data items. Simple, but inefficient for updating parts of a value.</li>
+	<li><b>Column Family Stores</b> - Keys that point to multiple columns. Good for data distributed over multiple machines.</li>
+	<li><b>Document Databases</b> - Documents are collections of other key-value collections. Makes for more efficient queries.</li>
+	<li><b>Graph Databases</b> - Graph structures with nodes (i.e. entities) properties (information about nodes) and edges (connections between nodes). Efficient processing and capable for many machines.</li>
+</ul>
+</p>
+
+<p>It looks like the first 3 items are all key-value type databases, and the fourth is something else with which to be reckoned. As you may have guessed, the key-value databases map more easily to object-oriented programming, which is another +1 for NoSQL. On the downside, NoSQL generally lacks the ACID of relational databases. Whats more, the NoSQL data structure is more application-dependent, rendering it vendor incompatible and potentially unextendible to other applications.</p>
+
+<h4>Less technical thoughts...</h4>
+<p>Researching and writing this post was a little overwhelming because I have very little experience with databases. The pros and cons and nuances borne in the different types of databases runs deep. My goal was to provide a rudimentary, but correct and easy-to-understand comparison of SQL and NoSQL. Relational databases make more sense to me, maybe because I'm used to working in spreadsheets. And, the whole reason why SQL lacks scalability is admittedly a murky concept. But I look forward to working with both of them in class in the coming weeks.</p>
+
+
+<footer>--- Week 7 ---</footer>
+</span>
+</article>
+<hr>
+
+
+<article>
 <a href="#" id="post_link7">
 <span class="blog_head">
 <h4>July 29.2014</h4>
@@ -33,7 +83,7 @@
 </span>
 </a>
 
-<span class="post 7" style="display:;">
+<span class="post 7" style="display:none;">
 
 <p>Blocks, Procs and lambdas are instrumental function syntax in Ruby. After doing some due dilligence, I find it proper to extend to you my basic understanding of these guys. The differences between these <i>closures</i> are rather subtle and I sometimes wish there was only one type. But there are at least three. All three belong to the <span class="code">Proc</span> class, as in <i>proc</i>edure. This is very important.</p>
 
