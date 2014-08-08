@@ -1,8 +1,5 @@
 body	{
-	background: url(/unit1_projects/images/108a.jpg) no-repeat fixed;
-	webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+	background: url(/unit1_projects/images/108a.jpg) no-repeat center fixed;
     background-size: cover;
 	background-position: 100% 0px;
 	font-family: "Beantown", "Lucida Sans Unicode", sans-serif;
@@ -98,9 +95,8 @@ nav li{
 
 @media screen and (max-width: 600px){
 body	{
-	/*background-image: url(/unit1_projects/images/108a.jpg);*/
-	background-attachment: scroll;
-	background-size: auto;
+	background-image: url(/unit1_projects/images/108a_mobile.jpg);
+	/*background-size: auto;*/
 	/*background-position: 100% 0%;*/
 }
 
