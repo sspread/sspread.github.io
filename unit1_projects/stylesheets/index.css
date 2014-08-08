@@ -97,7 +97,7 @@ nav li{
 body	{
 	background-image: url(/unit1_projects/images/108a_mobile.jpg);
 	background-size: 100%;
-	background-position: 100% 100%;
+	background-position: center;
 }
 
 #name{
