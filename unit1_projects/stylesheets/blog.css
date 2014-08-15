@@ -99,7 +99,7 @@ article .text {
     display: block;
     margin: auto;
 }
-p {
+p, li {
     text-align: justify;
 }
 article .image {
