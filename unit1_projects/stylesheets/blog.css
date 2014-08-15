@@ -80,6 +80,8 @@ article a {
     text-decoration: none;
     color: inherit;
 }
+.post p a {color: purple;}
+
 section {
     width: 90%;
     color: #1A1A00;
@@ -107,6 +109,9 @@ article .image {
     padding-bottom: 3%;
     padding-left: .5%;
     padding-right: .5%;
+}
+article li {
+    padding: 7px 0px;
 }
 .code {
     background-color: #f8f8f8;

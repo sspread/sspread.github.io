@@ -1,451 +1,586 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Boatz'n'Blogz</title>
-<link rel="stylesheet" type="text/css" href="../unit1_projects/stylesheets/blog.css">
-<link rel="stylesheet" type="text/css" href="../unit1_projects/stylesheets/commentbox.css">
 
-<meta name="viewport" content="width=device-width">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<head>
+    <title>Boatz'n'Blogz</title>
+    <link rel="stylesheet" type="text/css" href="../unit1_projects/stylesheets/blog.css">
+    <link rel="stylesheet" type="text/css" href="../unit1_projects/stylesheets/commentbox.css">
+
+    <meta name="viewport" content="width=device-width">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body id="tech">
 
-<header>
-<div id="name">Tech</div>
-<nav>
-	<ul id="menunav">
-		<li><a href="../index.html" id="homenav">Home</a></li>
-		<li><a href="" id="technav">Technical Blog</a></li></span>
-		<li><a href="cultural.html" id="culturenav">DBC Culture</a></li>
-		<li><a href="../projects/jungle_joe.html" id="projetsnav">Projects</a></li>
-	</ul>
-</nav>
-</header>
-
-<section>
-
-<article>
-<a href="#" id="post_link8">
-<span class="blog_head">
-<h4>August 7.2014</h4>
-<h3>SQL and the Seek to Know NoSQL</h3>
-</span>
-</a>
-
-<span class="post 8" style="display:;">
-
-<p>SQL and NoSQL are different types of databases. SQL has been around since the 1970's and remains the dominant database structure. The term NoSQL ("Not Only SQL") was coined in 1998 and seeks to compliment SQL where it falls short. The big difference between the two is that SQL is relational and NoSQL is not. While there is much more to the story, I'm going to run with this idea for the benefit of high level comparison.</p>
-
-<h4>SQL</h4>
-<p>A relational database is one that stores information in a two-dimensional table format. Think about an Excel spreadsheet. The columns represent data fields, or attributes. The rows represent records that fill in the information for each field. For example a 'users' table, or relation, might hold fields for 'name', 'email' and 'dob'. Each row would be an individual user, uniquely identified by a primary key 'id' field. But that's not all. There could be another table with another set of attributes that relate to the original 'users' table. Maybe a schema example will illustrate more clearly.</p>
-
-<img class="image" src="../unit1_projects/images/twitter_schema.PNG" style="padding-bottom:0;">
-<p class="text">
-This theoretical Twitter database schema represents a one-to-many relationship between two tables. Each unique user can write many tweets. Each unique tweet relates to one unique user. Many-to-many and one-to-one relationships also exist between tables, and all three relationships can be present in one schema. As you can imagine, this web of relations can get complicated in big data applications. SQL's scalability drawback has coaxed NoSQL into existence. But before we discuss that, let's look at a key feature of SQL.</p>
-
-<p>In addition to offering an intuitive framework for storing data, SQL offers excellent data integrity, which is defined as having ACID:
-<ul>
-	<li><b>Atomicity</b> - All fields are updated at once, or none are updated at all.</li>
-	<li><b>Consistency</b> - All transactions transform the state according to the integrity constraints in place.</li>
-	<li><b>Isolation</b> - Multiple operations in a single transaction (i.e. updating multiple fields for a single record) do not intermingle in time with other transaction operations.</li>
-	<li><b>Durability</b> - Completed transactions are safely and reliably stored on a hard drive.</li>
-</ul>
-</p>
-
-<h4>NoSQL</h4>
-<p>The fact is, social media generates bigillafucks of data every day. As opposed to scaling <i>up</i> a SQL database by adding memory and faster hardware, NoSQL scales <i>out</i> by spreading the load over many commodity systems. It's design is relatively simple and cost effective. While SQL relational databases are birds of a feather, there are four types of NoSQL databases:
-<ul>
-	<li><b>Key-values Stores</b> - Unique keys point to data items. Simple, but inefficient for updating parts of a value.</li>
-	<li><b>Column Family Stores</b> - Keys that point to multiple columns. Good for data distributed over multiple machines.</li>
-	<li><b>Document Databases</b> - Documents are collections of other key-value collections. Makes for more efficient queries.</li>
-	<li><b>Graph Databases</b> - Graph structures with nodes (i.e. entities) properties (information about nodes) and edges (connections between nodes). Efficient processing and capable for many machines.</li>
-</ul>
-</p>
-
-<p>It looks like the first 3 items are all key-value type databases, and the fourth is something else with which to be reckoned. As you may have guessed, the key-value databases map more easily to object-oriented programming, which is another +1 for NoSQL. On the downside, NoSQL generally lacks the ACID of relational databases. Whats more, the NoSQL data structure is more application-dependent, rendering it vendor incompatible and potentially unextendible to other applications.</p>
-
-<h4>Less technical thoughts...</h4>
-<p>Researching and writing this post was a little overwhelming because I have very little experience with databases. The pros and cons and nuances borne in the different types of databases runs deep. My goal was to provide a rudimentary, but correct and easy-to-understand comparison of SQL and NoSQL. Relational databases make more sense to me, maybe because I'm used to working in spreadsheets. And, the whole reason why SQL lacks scalability is admittedly a murky concept. But I look forward to working with both of them in class in the coming weeks.</p>
-
-
-<footer>--- Week 7 ---</footer>
-</span>
-</article>
-<hr>
-
-
-<article>
-<a href="#" id="post_link7">
-<span class="blog_head">
-<h4>July 29.2014</h4>
-<h3>Proc Party</h3>
-</span>
-</a>
-
-<span class="post 7" style="display:none;">
-
-<p>Blocks, Procs and lambdas are instrumental function syntax in Ruby. After doing some due dilligence, I find it proper to extend to you my basic understanding of these guys. The differences between these <i>closures</i> are rather subtle and I sometimes wish there was only one type. But there are at least three. All three belong to the <span class="code">Proc</span> class, as in <i>proc</i>edure. This is very important.</p>
-
-<h4>Blocks</h4>
-<p>Blocks are syntax literals for Proc objects. As such, you can create a block with curlies <span class="code">{}</span> (single line) or with <span class="code">do...end</span>. The code example below illustrates two ways to call the block from a method, and feed it an argument.</p>
-
-<img class="image_full" src="../unit1_projects/images/blocks.PNG">
-<br>
-<p class="code">
-block_call {|n| puts "I'm in the #{n}."}
-<span class="output">
-<br>=> I'm before the block.
-<br>=> I'm in the block.
-<br>=> I'm after the block.
-</span>
-</p>
-
-<p>Blocks are easy to code on the fly, but there's another way to create Procs that allows us to save our snippets to objects.</p>
-
-<h4>Procs</h4>
-<p>Although blocks actually are Procs, Procs behave a little differently when explicitly created with <span class="code">Proc.new</span>.</p>
-
-<img class="image_full" src="../unit1_projects/images/procs.PNG">
-<br>
-<p class="code">
-proc_call(where_r_u)
-<br>puts
-<br>proc_call_vip(where_r_u)
-<span class="output">
-<br>=> I'm before the proc.
-<br>=> I'm in the proc, dummy!
-<br>=> I'm in the proc, fool!
-<br>=> I'm in the proc, doofus!
-<br>=> I'm after the proc.
-<br>=> 
-<br>=> I'm before the proc.
-<br>=> I'm in the VIP section, dummy!
-<br>=> I'm in the VIP section, fool!
-<br>=> I'm in the VIP section, doofus!
-<br>=> I'm after the proc.
-</span>
-</p>
-
-<p>Our <span class="code">where_r_u</span> Proc is a little rude, but he's DRY because we only have to define him once and can use him forever.</p>
-
-<h4>Lambdas</h4>
-<p>Finally, creating a Proc with the keyword <span class="code">lambda</span> makes for even a slightly different Proc. Lambdas have two key differences from the Procs I described above. The first is that a lambda actually cares about the number of arguments passed to it. &iexcl;Mira!</p>
-
-<p class="code">
-proq = proc {|x,y| "#{x} y #{y}"}
-<br>lamb = lambda {|x,y| "#{x} y #{y}"}
-<br>
-<br>puts proq.call('uno','dos')
-<br><span class="output">=> uno y dos</span>
-<br>puts proq.call('uno')
-<br><span class="output">=> uno y </span>
-<br>puts lamb.call('uno','dos')
-<br><span class="output">=> uno y dos</span>
-<br>puts lamb.call('uno')
-<br><span class="output">=> 'block in (main)': wrong number of arguments (1 for 2) (ArgumentError)</span>
-</p>
-
-<p>On second thought, using Spanish with these particular variable letters may have added unfair befuddlement to this example, but I hope you get it. <span class="code">lambda</span> will throw a fuss if you neglect an argument, and <span class="code">Proc.new</span> (equivalent to <span class="code">proc</span>) will throw your shit into a bag and push it down the stairs. Because it don't care.</p>
-
-<p>The other difference is in the way lambdas and Procs treat <span class="code">return</span>. <span class="code">lambda</span> returns only from itself, while <span class="code">proc</span> returns from itself <i>and</i>  from the method from whence it came. Looksee!</p>
-
-<img class="image_full" src="../unit1_projects/images/return.PNG">
-<br>
-<p class="code">
-puts who_r_u ima_lambda
-<br>puts
-<br>puts who_r_u ima_lambda, 1
-<span class="output">
-<br>=> Who are you Procs?
-<br>=> I'm a lamb, duh!
-<br>=> Who's your friend?
-<br>=> I'm a Proc!
-<br>=> 
-<br>=> Who are you Procs?
-<br>=> I'm a Proc!
-</span>
-</p>
-
-<p>When the lambda is executed first within <span class="code">#who_r_u</span>, the rest of the method's code is executed. However, when the Proc is executed first, its <span class="code">return</span> skips the remainder of the method's code. Also worth noting in this example, Ruby does not allow arguments containing <span class="code">return</span>, so I had to define <span class="code">ima_proc</span> within our method. However, lambdas can magically get away with it, so <span class="code">ima_lambda</span> is defined outside the method and passed in as an argument.</p>
-
-<p>And that's all I have for you.</p>
-
-<footer>--- Week 6 ---</footer>
-</span>
-</article>
-<hr>
-
-<article>
-<a href="#" id="post_link6">
-<span class="blog_head">
-<h4>July 23.2014</h4>
-<h3>Dealing a Poker Hand in Ruby</h3>
-</span>
-</a>
-
-<span class="post 6" style="display:none;">
-<p>In this piece, I'm going to run through a short Ruby program I wrote to deal a hand of poker. I will discuss classes and instance variables, among other concepts. Let's take it step by step.</p>
-
-<img class="image_full" src="../unit1_projects/images/poker_initialize.PNG">
-
-<p> First, we must define a new <span class="code">class PokerHand</span> as a blueprint to contain our methods and characterisics pertaining to a hand of poker. The first method in a new class is always going to be <span class="code">#initialize</span>.  When you create a new instance of the class PokerHand (i.e. an individual hand), you call <span class="code">#new</span> on the class, which automatically looks for and executes <span class="code">#initialize</span> within the class definition. Let's do that now.</p>
-
-<p class="code">
-hand1=PokerHand.new(5)
-<br><span class="output">=> There are 5 players.</span>
-</p>
-
-<p>We put a <span class="code">5</span> as the argument when creating the new class, which is interpreted by <span class="code">#initialize</span> as the number of players in our game. Behind the scenes, <span class="code">#initialize</span> also created a deck of cards, shuffled them, and dealt two to each player! I know, you want to see what you were dealt, right? Let's write another method to access the array value of the <span class="code">:hero</span> hash key.</p>
-
-<img class="image_full" src="../unit1_projects/images/poker_hero_hand.PNG">
-<br>
-<p span class="code">
-hand1.hero_hand
-<br><span class="output">=> Your hand is ["6c", "6s"]</span>
-</p>
-
-<p>Not bad, pocket 6's! See the '@' attached to our <span class="code">@players</span> hash variable? That makes it an <i>instance variable</i> that our program can access across methods in our new PokerHand class, so long as it pertains to the same instance (i.e. <span class="code">hand1</span>). Let's skip the betting for now and see a flop!</p>
-
-<img class="image_full" src="../unit1_projects/images/poker_flop.PNG">
-<br>
-<p class="code">
-hand1.flop
-<br><span class="output">=> Flop: ["Ac", "3s", "Jc"]</span>
-</p>
-
-<p>Probably not the flop we wanted to see, but our program is working! Let's write one more method to see our opponent's hands.</p>
-
-<img class="image_full" src="../unit1_projects/images/poker_villain_hand.PNG">
-<br>
-<p class="code">
-hand1.villain_hand(:two)
-<br><span class="output">=> private method 'villain_hand' called for #(PokerHand:0x2c92248) (NoMethodError)</span>
-</p>
-
-<p>Not so fast! I told Ruby that <span class="code">#villain_hand</span> is <span class="code">private</span>. This means that only our program can access this method and see player two's hand (or any of our opponent's hands, for that matter). We might have our program call this private method later on when we extend it to find out who wins, but that's for another day.</p>
-
-<footer>
---- Week 5 ---
-</footer>
-</span>
-</article>
-<hr>
-
-<article>
-<a href="#" id="post_link5">
-<span class="blog_head">
-<h4>July 14.2014</h4>
-<h3>Ruby's The Enumerables</h3>
-</span>
-</a>
-
-<span class="post 5" style="display:none;">
-<p>An enumerable is collection of information that is able to be enumerated. To enumerate means to process the elements in the collection, piece by piece. You might feel like an enumerable at the DMV.</p>
-
-<p>Now, Ruby has its own idea of enumerables, not unlike our English definition above. But, it's a little confusing when you first learn it, as I myself am doing along with you. Let me ramble off my understanding now. This is not for you; it is for me. Ahem...</p>
-
-<p>If you ask ruby what class <i>Enumerable</i> is <span class="code">Enumerable.class</span>, it will return <span class="code output">Module</span>. It is used as a mixin in the Array class. Modules group together methods, classes and constants. Modules are similar to classes in this way, but you cannot create objects based on modules. Modules provide a namespace and allow you to share the functionality of instance methods between classes (mixins). <i>Enumerator</i> is a <i>Class</i> class. The Array class returns an <i>Enumerator</i> object when no block is given to <i>#each</i>. The <i>Enumerator</i> allows us to chain methods together indefinitely, as the previous chained methods will not be given blocks.</p>
-
-<p>OK back to what we really came here to do. Let's discuss the <i>Enumerable#group_by</i> method. <i>#group_by</i> groups a collection by the criteria provided in the block. It returns a hash where each key represents a group whose values are an array containing its members.</p>
-
-<p>An example...</p>
-
-<p class="code">
-fish_names = ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]
-<br>fish_names.group_by{|name| name.length}
-<br><span class="output">=> {4=>["Nemo", "Glut", "Dory"], 5=>["Bruce", "Coral"], 6=>["Marlin", "Blenny"]}</span>
-</p>
-
-<p><i>#group_by</i> grouped the names by their length, as specified in the block. Now let's omit the block and see what ruby returns...</p>
-
-<p class="code">fish_names.group_by
-<br><span class="output">=> #(Enumerator: ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]:group_by)</span>
-</p>
-
-<p>Now we could store that <i>Enumerator</i> as a variable and save it for later. What use is this <i>#group_by</i> Enumerator without any grouping criteria? I have no idea.</p>
-
-<footer>
---- Week 4 ---
-</footer>
-</span>
-</article>
-<hr>
-<article>
-<a href="#" id="post_link4">
-<span class="blog_head">
-<h4>July 12.2014</h4>
-<h3>JavaScript in Web Development</h3>
-</span>
-</a>
-
-<span class="post 4" style="display:none;">
-<img class = "image" src="../unit1_projects/images/javascript.jpg" style="width:19%; padding:0;">
-
-<p class="text" style="width:79%; padding:0;">
-<b>JavaScript is a computer language</b> commonly used in web development. To understand JavaScript's role in the web, we must first establish a concept called client-side programming. The client is the computer that communicates with the server. You might think of the client as your laptop. Instead of only pointing to a file, the web server can run a program process the file before sending it to the client. This makes the web more dynamic. Alternatively, the <i>client</i> can run that program to process the file after it receives it. This client-side program is written in JavaScript. Let's look at some features and pitfalls. 
-</p>
-
-<span class="text">
-<p>
-<b>We like JavaScript!</b>
-<ul style="text-align: justify;">
-<li><i>JavaSript is fast.</i> It executes on the client side and reduces strain on the web server and saves bandwith.</li>
-<li><i>JavaScript is compatible.</i> It interacts with the user's web browser, so it is supported on any platform that supports that browser.</li>
-<li><i>JavaScript is easy.</i> It uses the DOM model so it can already recognize the objects on web pages.</li>
-<li><i>JavaScript is extendible</i>. Developers can write snippets that users can download that will interact with certain web pages and enhance functionality.</li>
-</ul>
-</p>
-</span>
-
-<span class="text">
-<p>
-<b>Not so fast...</b>
-<ul style="text-align: justify;">
-<li><i>JavaSript can be dangerous.</i> Developers can write JavaScript programs that execute on the client's computer to do something that the user did not intend. The program could attack the client's system and/or send out private information. Although browsers limit JavaScripts, capabilities, malicious developers periodically find ways to circumvent the rules.</li>
-<li><i>JavaScript can be inconsistent across browsers.</i> Because JavaScript relies on the end user, developers cannot perfectly tailor their programs to varying browsers, settings and general environments.</li>
-</ul>
-</p>
-</span>
-
-<footer>
---- Week 3 ---
-</footer>
-</span>
-</article>
-
-<hr>
-
-<article>
-<a href="#" id="post_link3">
-<span class="blog_head">
-<h4>July 6.2014</h4>
-<h3>Learning CSS - Padding, Border and Margin</h3>
-</span>
-</a>
-
-<span class="post 3" style="display:none;">
-<img class = "image" src="../unit1_projects/images/margin.jpg" style="float: left; padding-bottom:0;">
-
-<p class="text" style="padding:0;">
-The skeleton of a web site is constructed from HTML. Instead of bones, HTML defines all of its elements as boxes. Then comes CSS to flesh out the web site and make it beautiful. CSS uses the box model to wrap layers around the box defined by HTML. Each of these layers has unique properties.
-</p>
-<p>
-<b>Content</b> is at the center of the box model. We can see content in blue. Content is the box that holds holds the site's text and images.
-</p> 
-<p>
-<b>Padding</b> creates a space around the content. Padding takes the background color defined by the content. The brown highlights that appear around the menu items on this page upon hover are created by padding.
-</p>
-<p>
-<b>Border</b> surrounds the padding and content. It takes the color and design (i.e. solid, dotted, rounded corners) defined by the content. The blue underline on the header of this page is created with a border surrounding only the bottom of the header box.
-</p>
-<p>
-<b>Margin</b> establishes an invisible force field around the whole package. The blank space above the navigation bar and on either side of the main content of this page are created by margins.
-</p>
-<p>
-Note: the differences between padding, border and margin can be be unclear because they can be used interchangeably at times. For example, I could indent the title of this page "Tech" by using left margin or left padding. This is possible because there is no border around the content and we are not dealing with different background colors. 
-</p>
-<p>
-Finally, the thickness of each layer begins at the inner layer and extends outwards. When designing a web site, remember that the actual height and width of an element is the sum of the content, plus the layers added by padding, border and margin. 
-</p>
-
-<footer>
---- Week 2 ---
-</footer>
-</span>
-</article>
-<hr>
-
-<article>
-<a href="#" id="post_link2">
-<span class="blog_head">
-<h4>June 30.2014</h4>
-<h3>Websites - Wireframed</h3>
-</span>
-</a>
-
-<span class="post 2" style="display:none;">
-<p> A wireframe is a simplified blueprint of a screen design. Check out the wireframe versions of the websites I mentioned on my Technical Blog page. Click the image for a bigger version.</p>
-
-<a href="../unit1_projects/images/spotify_wire.png" target="_blank">
-<img class = "image" src="../unit1_projects/images/spotify_wire.png"></a>
-<p class="text">
-<b>Spotify.com</b> - There isn't much to read upon initial view. The home screen is to the point. It's main purpose is to draw in the viewer, as visitors of this website (as opposed to the application) are usually not yet subscribers. The huge image is followed by a potpourri of album art scattered about the bottom of the page. Because these smaller images are covered, it invites the user to scroll down: that's where the real presentation is made.
-</p>
-
-<a href="../unit1_projects/images/css-tricks_wire.png" target="_blank">
-<img class = "image" src="../unit1_projects/images/css-tricks_wire.png"></a>
-<p class="text">
-<b>css-tricks.com</b> - One of the most appealing things about this site is the beautiful color scheme. The wireframe takes that away from us. What we now realize is that half of the view is basically header and nav bar. There isn't much in terms of content before scrolling down to read what you came for. There is considerable space dedicated to treehouse, so it's safe to assume they're in cahootz. Nevertheless, the simplicity of this layout is appealing.
-</p>
-
-<a href="../unit1_projects/images/github_wire.png" target="_blank">
-<img class = "image" src="../unit1_projects/images/github_wire.png"></a>
-<p class="text">
-<b>GitHub.com</b> - I've somehow managed to make the GitHub visual experience even worse by reducing it to wireframe. See that huge gaping white space? That's what remains after closing the information boxes that used to be there upon first creating an account. Removing those boxes actually made the site easier to navigate because our eyes go straight for the good stuff, that is, our repositories. That's all we came for, I hope.
-</p>
-
-<footer>
---- Week 1 ---
-</footer>
-</span>
-</article>
-
-<hr>
-
-<article>
-<a href="#" id="post_link1">
-<span class="blog_head">
-<h4>June 29.2014</h4>
-<h3>Websites Worth a Visit</h3>
-</span>
-</a>
-
-<span class="post 1" style="display:none;">
-<a href="http://www.spotify.com" target="_blank">
-<img class="image" src="../unit1_projects/images/spotify.jpg"></a>
-<p class="text">
-<b>Spotify.com</b> is a music streaming site. I'm a paid subscriber and I use the app on my PC and smartphone every day. Spotify is the way to go for music because it allows you to listen to any song, album or artist on demand. Paid subscribers can download songs to their device to access when offline. Today I checked out the website as opposed to the downloaded app. As the face of the business, this is where Spotify has a chance to make a first impression in hopes of selling its service. The close-up, candid action shots convey a fun-loving attitude that isn't difficult to associate with music on the go. As an aspiring web developer, I am particularly impressed with the way the pictures scroll in tandem with text content. The foreground of text scrolls faster than the alternating photos of twenty-somethings livin' life, giving a stunning, yet humble suggestion that using Spotify is a good idea. Check out Spotify (at least the homepage)!
-</p>
-
-<a href="http://www.css-tricks.com" target="_blank">
-<img class="image" src="../unit1_projects/images/css-tricks.jpg"></a>
-<p class="text">
-<b>css-tricks.com</b> is a great site I discovered the other day, probably in the midst of frantically tryin to coax div-a and div-b to behave with div-c. I was instantly drawn to the design of this site. The colors are very appealing and entice the viewer to stay a while and explore. Something very clever I noticed in the design of this site was that it rearranges itself to three distinct layouts as you squish the width of the browser window. I'm not talking the default automatic stuff. The navigation tabs change shape and arrangement. The brown border between each box actually disappears to allow more concise viewing at the smallest with. This is the first time I've noticed such a reactive scheme on a web page. The footer of the site discloses that it was made on WordPress. Is that cheating? Either way, this site is both useful and beautiful.
-</p>
-
-<a href="http://www.github.com/explore" target="_blank">
-<img class="image" src="../unit1_projects/images/github.jpg"></a>
-<p class="text">
-<b>GitHub.com</b> is an online marketplace for developers to share code. I suppose non-developers could grab some code from GitHub as well, but the site is so overwhelming, I wouldn't want to go near it if I didn't have to. As a relatively new user, GitHub is like a dark basement with a noisy furnace; I'm only going down there to get a screwdriver or change the cat's litter box, and then I'm gone. In lieu of intimidation factor, GitHub is a fantastically practical tool for web development. I've attempted to show its bright and colorful side with a screenshot of the "Explore" page, but the truth is, GitHub is not bright and colorful. It is a confusing web of oversharing. Maybe it's nothing more than my own inexperience, but when it comes to GitHub I want to git what I came for and git out. Fortunately, I'd rather interact with GitHub from the safety of my command line.
-</p>
-<footer>
---- Week 1 ---
-</footer>
-</span>
-</article>
-
-</section>
-
-<section id="comment_section">
-<article id="comment_article">
-<a href="#" id="comment_box_link">
-<span class="blog_head">
-<h4>Comments</h4>
-<h3>Drop a Line!</h3>
-</span>
-</a>
-
-<span class="comment_box" style="display:none;">
-<!-- begin htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
- <script type="text/javascript" language="javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={  };} (function(){s=document.createElement("script");s.setAttribute("type","text/javascript");s.setAttribute("src", "http://www.htmlcommentbox.com/jread?page="+escape((window.hcb_user && hcb_user.PAGE)||(""+window.location)).replace("+","%2B")+"&opts=470&num=10");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end htmlcommentbox.com -->
-</span>
-</article>
-</section>
-
-<script src="../scripts/posttoggle.js"></script>
+    <header>
+        <div id="name">Tech</div>
+        <nav>
+            <ul id="menunav">
+                <li><a href="../index.html" id="homenav">Home</a>
+                </li>
+                <li><a href="" id="technav">Technical Blog</a>
+                </li>
+                </span>
+                <li><a href="cultural.html" id="culturenav">DBC Culture</a>
+                </li>
+                <li><a href="../projects/jungle_joe.html" id="projetsnav">Projects</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+
+        <article>
+            <a href="#" id="post_link9">
+                <span class="blog_head">
+                    <h4>August 14.2014</h4>
+                    <h3>Attacking Regular Expressions</h3>
+                </span>
+            </a>
+
+            <span class="post 9" style="display:;">
+                <p>Regular expressions can frighten new programmers because they resemble monsters with teeth made from backslashes and forward slashes. In this journey, I aim to befriend this beast by learning about it.</p>
+
+                <p>A regular expression (regex or regexp) defines a pattern by which to compare a string. In a world cluttered with too much information (TMI), it isn't difficult to appreciate the parsing power of regexes. As I researched regexes, they became less scary, and, I had a realization: there are a ton of resources on the web that can explain regexes better and more thoroughly than yours truly. So, in an effort to make the most of your time, I've made this blog post a potpourri of miniature <i>Aha!</i> moments, potential pitfalls and other big ideas that I discovered in my quest for understanding basic regex.</p>
+                <ul>
+                    <li>Ruby's
+                        <span class="code">/.../</span>and
+                        <span class="code">%r{...}</span>are the same thing. They are delimiters that surround the regex to tell Ruby that what's inside is, in fact, a regex. Other programming languages may have different syntax. Simply knowing
+                        <span class="code">/.../</span>makes reading regex syntax more manageable, but this notation necessitates <i>escaping</i> any other forward slashes in the regex sequence.</li>
+
+                    <li>The escape character
+                        <span class="code">\</span>is perhaps the foremost toothy culprit for regex's unsightliness. Most characters in regex are <i>literal</i>, meaning that they seek to match themselves in the string. But, some characters are special <i>metacharacters</i> in regex; they represent a regex rule. The
+                        <span class="code">\</span>simply turns a special character into a literal character. The next bullet point provides an example of how the
+                        <span class="code">\</span>can also escape a literal character into a special character!</li>
+
+                    <li>Metacharacters (i.e
+                        <span class="code">\w</span>,
+                        <span class="code">\s</span>and
+                        <span class="code">\d</span>) act as shorthand equivalents for the POSIX bracket expressions, similar to character classes mentioned below, denoted with double brackets and colons (i.e.
+                        <span class="code">[[:word:]]</span>,
+                        <span class="code">[[:space:]]</span>and
+                        <span class="code">[[:digit:]]</span>, respectively). These bracket expressions also match non-ASCII characters.</li>
+
+                    <li>A character class, established with brackets
+                        <span class="code">[ ]</span>, is like a whole basket of characters that regex can use to make a match. Regex finds a match if <i>any</i> of the characters in the character class match the string's character.</li>
+
+                    <li>Ruby uses
+                        <span class="code">=~</span>and
+                        <span class="code">#match</span>to make match magic.
+                        <span class="code">=~</span>returns the character index where the match began, while
+                        <span class="code">#match</span>returns a MatchData object, which is a package of results of a pattern match, including the original regexp! Both methods return
+                        <span class="code">nil</span>for no match, and neither method cares what comes first: regex or string.</li>
+
+                    <li>The caret
+                        <span class="code">^</span>is a special character (anchor) that dictates that the match must come at the beginning of the string. Otherwise, the match could begin anywhere. Similarly, the dolla sign
+                        <span class="code">$</span>is an anchor for the <i>end</i> of the string. But take note! The
+                        <span class="code">^</span>inside the
+                        <span class="code">[ ]</span>of a character class acts instead as a NOT operator, matching any character <i>except</i> those in the character class.</li>
+
+                    <li>Regex is greedy when it comes to repetition. Quantifiers (i.e.
+                        <span class="code">*</span>or
+                        <span class="code">+</span>) allow regex to match the character more than zero or more than one time, respectively. By default, even once the regex matches the string, regex will keep matching characters along the string until it reaches a character that would kill the match. Placing a
+                        <span class="code">?</span>after these quantifiers will make it <i>lazy</i>, that is, limit the repetition to zero or one. Let's conclude with an example... The dot
+                        <span class="code">.</span>means "any character".
+                        <br>
+                        <br>
+                        <p class="code">
+                            /.*te.*/.match("This regex is definitely greedy.")
+                            <br>
+                            <span class="output">=> #&#60MatchData "This regex is definitely greedy."&#62</span>
+                            <br>/.*te.*?/.match("This regex is definitely greedy.")
+                            <br>
+                            <span class="output">=> #&#60MatchData "This regex is definite"&#62</span>
+                        </p>
+                    </li>
+                </ul>
+
+                <p>The regex concepts beyond what I've discussed here I'm going to deem "intermediate". I hope my rambling is helpful as a supplement to fill in the gaps when learning regex. The <a href="http://www.ruby-doc.org/core-2.1.1/Regexp.html#class-Regexp-label-Repetition" target="_blank">Ruby Docs</a> are a big-time resource for regex in the context of Ruby.</p>
+
+                <footer>--- Week 8 ---</footer>
+            </span>
+        </article>
+        <hr>
+
+        <article>
+            <a href="#" id="post_link8">
+                <span class="blog_head">
+                    <h4>August 7.2014</h4>
+                    <h3>SQL and the Seek to Know NoSQL</h3>
+                </span>
+            </a>
+
+            <span class="post 8" style="display:none;">
+
+                <p>SQL and NoSQL are different types of databases. SQL has been around since the 1970's and remains the dominant database structure. The term NoSQL ("Not Only SQL") was coined in 1998 and seeks to compliment SQL where it falls short. The big difference between the two is that SQL is relational and NoSQL is not. While there is much more to the story, I'm going to run with this idea for the benefit of high level comparison.</p>
+
+                <h4>SQL</h4>
+                <p>A relational database is one that stores information in a two-dimensional table format. Think about an Excel spreadsheet. The columns represent data fields, or attributes. The rows represent records that fill in the information for each field. For example a 'users' table, or relation, might hold fields for 'name', 'email' and 'dob'. Each row would be an individual user, uniquely identified by a primary key 'id' field. But that's not all. There could be another table with another set of attributes that relate to the original 'users' table. Maybe a schema example will illustrate more clearly.</p>
+
+                <img class="image" src="../unit1_projects/images/twitter_schema.PNG" style="padding-bottom:0;">
+                <p class="text">
+                    This theoretical Twitter database schema represents a one-to-many relationship between two tables. Each unique user can write many tweets. Each unique tweet relates to one unique user. Many-to-many and one-to-one relationships also exist between tables, and all three relationships can be present in one schema. As you can imagine, this web of relations can get complicated in big data applications. SQL's scalability drawback has coaxed NoSQL into existence. But before we discuss that, let's look at a key feature of SQL.</p>
+
+                <p>In addition to offering an intuitive framework for storing data, SQL offers excellent data integrity, which is defined as having ACID:
+                    <ul>
+                        <li><b>Atomicity</b> - All fields are updated at once, or none are updated at all.</li>
+                        <li><b>Consistency</b> - All transactions transform the state according to the integrity constraints in place.</li>
+                        <li><b>Isolation</b> - Multiple operations in a single transaction (i.e. updating multiple fields for a single record) do not intermingle in time with other transaction operations.</li>
+                        <li><b>Durability</b> - Completed transactions are safely and reliably stored on a hard drive.</li>
+                    </ul>
+                </p>
+
+                <h4>NoSQL</h4>
+                <p>The fact is, social media generates bigillafucks of data every day. As opposed to scaling <i>up</i> a SQL database by adding memory and faster hardware, NoSQL scales <i>out</i> by spreading the load over many commodity systems. It's design is relatively simple and cost effective. While SQL relational databases are birds of a feather, there are four types of NoSQL databases:
+                    <ul>
+                        <li><b>Key-values Stores</b> - Unique keys point to data items. Simple, but inefficient for updating parts of a value.</li>
+                        <li><b>Column Family Stores</b> - Keys that point to multiple columns. Good for data distributed over multiple machines.</li>
+                        <li><b>Document Databases</b> - Documents are collections of other key-value collections. Makes for more efficient queries.</li>
+                        <li><b>Graph Databases</b> - Graph structures with nodes (i.e. entities) properties (information about nodes) and edges (connections between nodes). Efficient processing and capable for many machines.</li>
+                    </ul>
+                </p>
+
+                <p>It looks like the first 3 items are all key-value type databases, and the fourth is something else with which to be reckoned. As you may have guessed, the key-value databases map more easily to object-oriented programming, which is another +1 for NoSQL. On the downside, NoSQL generally lacks the ACID of relational databases. Whats more, the NoSQL data structure is more application-dependent, rendering it vendor incompatible and potentially unextendible to other applications.</p>
+
+                <h4>Less technical thoughts...</h4>
+                <p>Researching and writing this post was a little overwhelming because I have very little experience with databases. The pros and cons and nuances borne in the different types of databases runs deep. My goal was to provide a rudimentary, but correct and easy-to-understand comparison of SQL and NoSQL. Relational databases make more sense to me, maybe because I'm used to working in spreadsheets. And, the whole reason why SQL lacks scalability is admittedly a murky concept. But I look forward to working with both of them in class in the coming weeks.</p>
+
+
+                <footer>--- Week 7 ---</footer>
+            </span>
+        </article>
+        <hr>
+
+
+        <article>
+            <a href="#" id="post_link7">
+                <span class="blog_head">
+                    <h4>July 29.2014</h4>
+                    <h3>Proc Party</h3>
+                </span>
+            </a>
+
+            <span class="post 7" style="display:none;">
+
+                <p>Blocks, Procs and lambdas are instrumental function syntax in Ruby. After doing some due dilligence, I find it proper to extend to you my basic understanding of these guys. The differences between these <i>closures</i> are rather subtle and I sometimes wish there was only one type. But there are at least three. All three belong to the
+                    <span class="code">Proc</span>class, as in <i>proc</i>edure. This is very important.</p>
+
+                <h4>Blocks</h4>
+                <p>Blocks are syntax literals for Proc objects. As such, you can create a block with curlies
+                    <span class="code">{}</span>(single line) or with
+                    <span class="code">do...end</span>. The code example below illustrates two ways to call the block from a method, and feed it an argument.</p>
+
+                <img class="image_full" src="../unit1_projects/images/blocks.PNG">
+                <br>
+                <p class="code">
+                    block_call {|n| puts "I'm in the #{n}."}
+                    <span class="output">
+                        <br>=> I'm before the block.
+                        <br>=> I'm in the block.
+                        <br>=> I'm after the block.
+                    </span>
+                </p>
+
+                <p>Blocks are easy to code on the fly, but there's another way to create Procs that allows us to save our snippets to objects.</p>
+
+                <h4>Procs</h4>
+                <p>Although blocks actually are Procs, Procs behave a little differently when explicitly created with
+                    <span class="code">Proc.new</span>.</p>
+
+                <img class="image_full" src="../unit1_projects/images/procs.PNG">
+                <br>
+                <p class="code">
+                    proc_call(where_r_u)
+                    <br>puts
+                    <br>proc_call_vip(where_r_u)
+                    <span class="output">
+                        <br>=> I'm before the proc.
+                        <br>=> I'm in the proc, dummy!
+                        <br>=> I'm in the proc, fool!
+                        <br>=> I'm in the proc, doofus!
+                        <br>=> I'm after the proc.
+                        <br>=>
+                        <br>=> I'm before the proc.
+                        <br>=> I'm in the VIP section, dummy!
+                        <br>=> I'm in the VIP section, fool!
+                        <br>=> I'm in the VIP section, doofus!
+                        <br>=> I'm after the proc.
+                    </span>
+                </p>
+
+                <p>Our
+                    <span class="code">where_r_u</span>Proc is a little rude, but he's DRY because we only have to define him once and can use him forever.</p>
+
+                <h4>Lambdas</h4>
+                <p>Finally, creating a Proc with the keyword
+                    <span class="code">lambda</span>makes for even a slightly different Proc. Lambdas have two key differences from the Procs I described above. The first is that a lambda actually cares about the number of arguments passed to it. &iexcl;Mira!</p>
+
+                <p class="code">
+                    proq = proc {|x,y| "#{x} y #{y}"}
+                    <br>lamb = lambda {|x,y| "#{x} y #{y}"}
+                    <br>
+                    <br>puts proq.call('uno','dos')
+                    <br>
+                    <span class="output">=> uno y dos</span>
+                    <br>puts proq.call('uno')
+                    <br>
+                    <span class="output">=> uno y</span>
+                    <br>puts lamb.call('uno','dos')
+                    <br>
+                    <span class="output">=> uno y dos</span>
+                    <br>puts lamb.call('uno')
+                    <br>
+                    <span class="output">=> 'block in (main)': wrong number of arguments (1 for 2) (ArgumentError)</span>
+                </p>
+
+                <p>On second thought, using Spanish with these particular variable letters may have added unfair befuddlement to this example, but I hope you get it.
+                    <span class="code">lambda</span>will throw a fuss if you neglect an argument, and
+                    <span class="code">Proc.new</span>(equivalent to
+                    <span class="code">proc</span>) will throw your shit into a bag and push it down the stairs. Because it don't care.</p>
+
+                <p>The other difference is in the way lambdas and Procs treat
+                    <span class="code">return</span>.
+                    <span class="code">lambda</span>returns only from itself, while
+                    <span class="code">proc</span>returns from itself <i>and</i> from the method from whence it came. Looksee!</p>
+
+                <img class="image_full" src="../unit1_projects/images/return.PNG">
+                <br>
+                <p class="code">
+                    puts who_r_u ima_lambda
+                    <br>puts
+                    <br>puts who_r_u ima_lambda, 1
+                    <span class="output">
+                        <br>=> Who are you Procs?
+                        <br>=> I'm a lamb, duh!
+                        <br>=> Who's your friend?
+                        <br>=> I'm a Proc!
+                        <br>=>
+                        <br>=> Who are you Procs?
+                        <br>=> I'm a Proc!
+                    </span>
+                </p>
+
+                <p>When the lambda is executed first within
+                    <span class="code">#who_r_u</span>, the rest of the method's code is executed. However, when the Proc is executed first, its
+                    <span class="code">return</span>skips the remainder of the method's code. Also worth noting in this example, Ruby does not allow arguments containing
+                    <span class="code">return</span>, so I had to define
+                    <span class="code">ima_proc</span>within our method. However, lambdas can magically get away with it, so
+                    <span class="code">ima_lambda</span>is defined outside the method and passed in as an argument.</p>
+
+                <p>And that's all I have for you.</p>
+
+                <footer>--- Week 6 ---</footer>
+            </span>
+        </article>
+        <hr>
+
+        <article>
+            <a href="#" id="post_link6">
+                <span class="blog_head">
+                    <h4>July 23.2014</h4>
+                    <h3>Dealing a Poker Hand in Ruby</h3>
+                </span>
+            </a>
+
+            <span class="post 6" style="display:none;">
+                <p>In this piece, I'm going to run through a short Ruby program I wrote to deal a hand of poker. I will discuss classes and instance variables, among other concepts. Let's take it step by step.</p>
+
+                <img class="image_full" src="../unit1_projects/images/poker_initialize.PNG">
+
+                <p>First, we must define a new
+                    <span class="code">class PokerHand</span>as a blueprint to contain our methods and characterisics pertaining to a hand of poker. The first method in a new class is always going to be
+                    <span class="code">#initialize</span>. When you create a new instance of the class PokerHand (i.e. an individual hand), you call
+                    <span class="code">#new</span>on the class, which automatically looks for and executes
+                    <span class="code">#initialize</span>within the class definition. Let's do that now.</p>
+
+                <p class="code">
+                    hand1=PokerHand.new(5)
+                    <br>
+                    <span class="output">=> There are 5 players.</span>
+                </p>
+
+                <p>We put a
+                    <span class="code">5</span>as the argument when creating the new class, which is interpreted by
+                    <span class="code">#initialize</span>as the number of players in our game. Behind the scenes,
+                    <span class="code">#initialize</span>also created a deck of cards, shuffled them, and dealt two to each player! I know, you want to see what you were dealt, right? Let's write another method to access the array value of the
+                    <span class="code">:hero</span>hash key.</p>
+
+                <img class="image_full" src="../unit1_projects/images/poker_hero_hand.PNG">
+                <br>
+                <p span class="code">
+                    hand1.hero_hand
+                    <br>
+                    <span class="output">=> Your hand is ["6c", "6s"]</span>
+                </p>
+
+                <p>Not bad, pocket 6's! See the '@' attached to our
+                    <span class="code">@players</span>hash variable? That makes it an <i>instance variable</i> that our program can access across methods in our new PokerHand class, so long as it pertains to the same instance (i.e.
+                    <span class="code">hand1</span>). Let's skip the betting for now and see a flop!</p>
+
+                <img class="image_full" src="../unit1_projects/images/poker_flop.PNG">
+                <br>
+                <p class="code">
+                    hand1.flop
+                    <br>
+                    <span class="output">=> Flop: ["Ac", "3s", "Jc"]</span>
+                </p>
+
+                <p>Probably not the flop we wanted to see, but our program is working! Let's write one more method to see our opponent's hands.</p>
+
+                <img class="image_full" src="../unit1_projects/images/poker_villain_hand.PNG">
+                <br>
+                <p class="code">
+                    hand1.villain_hand(:two)
+                    <br>
+                    <span class="output">=> private method 'villain_hand' called for #(PokerHand:0x2c92248) (NoMethodError)</span>
+                </p>
+
+                <p>Not so fast! I told Ruby that
+                    <span class="code">#villain_hand</span>is
+                    <span class="code">private</span>. This means that only our program can access this method and see player two's hand (or any of our opponent's hands, for that matter). We might have our program call this private method later on when we extend it to find out who wins, but that's for another day.</p>
+
+                <footer>
+                    --- Week 5 ---
+                </footer>
+            </span>
+        </article>
+        <hr>
+
+        <article>
+            <a href="#" id="post_link5">
+                <span class="blog_head">
+                    <h4>July 14.2014</h4>
+                    <h3>Ruby's The Enumerables</h3>
+                </span>
+            </a>
+
+            <span class="post 5" style="display:none;">
+                <p>An enumerable is collection of information that is able to be enumerated. To enumerate means to process the elements in the collection, piece by piece. You might feel like an enumerable at the DMV.</p>
+
+                <p>Now, Ruby has its own idea of enumerables, not unlike our English definition above. But, it's a little confusing when you first learn it, as I myself am doing along with you. Let me ramble off my understanding now. This is not for you; it is for me. Ahem...</p>
+
+                <p>If you ask ruby what class <i>Enumerable</i> is
+                    <span class="code">Enumerable.class</span>, it will return
+                    <span class="code output">Module</span>. It is used as a mixin in the Array class. Modules group together methods, classes and constants. Modules are similar to classes in this way, but you cannot create objects based on modules. Modules provide a namespace and allow you to share the functionality of instance methods between classes (mixins). <i>Enumerator</i> is a <i>Class</i> class. The Array class returns an <i>Enumerator</i> object when no block is given to <i>#each</i>. The <i>Enumerator</i> allows us to chain methods together indefinitely, as the previous chained methods will not be given blocks.</p>
+
+                <p>OK back to what we really came here to do. Let's discuss the <i>Enumerable#group_by</i> method. <i>#group_by</i> groups a collection by the criteria provided in the block. It returns a hash where each key represents a group whose values are an array containing its members.</p>
+
+                <p>An example...</p>
+
+                <p class="code">
+                    fish_names = ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]
+                    <br>fish_names.group_by{|name| name.length}
+                    <br>
+                    <span class="output">=> {4=>["Nemo", "Glut", "Dory"], 5=>["Bruce", "Coral"], 6=>["Marlin", "Blenny"]}</span>
+                </p>
+
+                <p><i>#group_by</i> grouped the names by their length, as specified in the block. Now let's omit the block and see what ruby returns...</p>
+
+                <p class="code">fish_names.group_by
+                    <br>
+                    <span class="output">=> #(Enumerator: ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]:group_by)</span>
+                </p>
+
+                <p>Now we could store that <i>Enumerator</i> as a variable and save it for later. What use is this <i>#group_by</i> Enumerator without any grouping criteria? I have no idea.</p>
+
+                <footer>
+                    --- Week 4 ---
+                </footer>
+            </span>
+        </article>
+        <hr>
+        <article>
+            <a href="#" id="post_link4">
+                <span class="blog_head">
+                    <h4>July 12.2014</h4>
+                    <h3>JavaScript in Web Development</h3>
+                </span>
+            </a>
+
+            <span class="post 4" style="display:none;">
+                <img class="image" src="../unit1_projects/images/javascript.jpg" style="width:19%; padding:0;">
+
+                <p class="text" style="width:79%; padding:0;">
+                    <b>JavaScript is a computer language</b> commonly used in web development. To understand JavaScript's role in the web, we must first establish a concept called client-side programming. The client is the computer that communicates with the server. You might think of the client as your laptop. Instead of only pointing to a file, the web server can run a program process the file before sending it to the client. This makes the web more dynamic. Alternatively, the <i>client</i> can run that program to process the file after it receives it. This client-side program is written in JavaScript. Let's look at some features and pitfalls.
+                </p>
+
+                <span class="text">
+                    <p>
+                        <b>We like JavaScript!</b>
+                        <ul style="text-align: justify;">
+                            <li><i>JavaSript is fast.</i> It executes on the client side and reduces strain on the web server and saves bandwith.</li>
+                            <li><i>JavaScript is compatible.</i> It interacts with the user's web browser, so it is supported on any platform that supports that browser.</li>
+                            <li><i>JavaScript is easy.</i> It uses the DOM model so it can already recognize the objects on web pages.</li>
+                            <li><i>JavaScript is extendible</i>. Developers can write snippets that users can download that will interact with certain web pages and enhance functionality.</li>
+                        </ul>
+                    </p>
+                </span>
+
+                <span class="text">
+                    <p>
+                        <b>Not so fast...</b>
+                        <ul style="text-align: justify;">
+                            <li><i>JavaSript can be dangerous.</i> Developers can write JavaScript programs that execute on the client's computer to do something that the user did not intend. The program could attack the client's system and/or send out private information. Although browsers limit JavaScripts, capabilities, malicious developers periodically find ways to circumvent the rules.</li>
+                            <li><i>JavaScript can be inconsistent across browsers.</i> Because JavaScript relies on the end user, developers cannot perfectly tailor their programs to varying browsers, settings and general environments.</li>
+                        </ul>
+                    </p>
+                </span>
+
+                <footer>
+                    --- Week 3 ---
+                </footer>
+            </span>
+        </article>
+
+        <hr>
+
+        <article>
+            <a href="#" id="post_link3">
+                <span class="blog_head">
+                    <h4>July 6.2014</h4>
+                    <h3>Learning CSS - Padding, Border and Margin</h3>
+                </span>
+            </a>
+
+            <span class="post 3" style="display:none;">
+                <img class="image" src="../unit1_projects/images/margin.jpg" style="float: left; padding-bottom:0;">
+
+                <p class="text" style="padding:0;">
+                    The skeleton of a web site is constructed from HTML. Instead of bones, HTML defines all of its elements as boxes. Then comes CSS to flesh out the web site and make it beautiful. CSS uses the box model to wrap layers around the box defined by HTML. Each of these layers has unique properties.
+                </p>
+                <p>
+                    <b>Content</b> is at the center of the box model. We can see content in blue. Content is the box that holds holds the site's text and images.
+                </p>
+                <p>
+                    <b>Padding</b> creates a space around the content. Padding takes the background color defined by the content. The brown highlights that appear around the menu items on this page upon hover are created by padding.
+                </p>
+                <p>
+                    <b>Border</b> surrounds the padding and content. It takes the color and design (i.e. solid, dotted, rounded corners) defined by the content. The blue underline on the header of this page is created with a border surrounding only the bottom of the header box.
+                </p>
+                <p>
+                    <b>Margin</b> establishes an invisible force field around the whole package. The blank space above the navigation bar and on either side of the main content of this page are created by margins.
+                </p>
+                <p>
+                    Note: the differences between padding, border and margin can be be unclear because they can be used interchangeably at times. For example, I could indent the title of this page "Tech" by using left margin or left padding. This is possible because there is no border around the content and we are not dealing with different background colors.
+                </p>
+                <p>
+                    Finally, the thickness of each layer begins at the inner layer and extends outwards. When designing a web site, remember that the actual height and width of an element is the sum of the content, plus the layers added by padding, border and margin.
+                </p>
+
+                <footer>
+                    --- Week 2 ---
+                </footer>
+            </span>
+        </article>
+        <hr>
+
+        <article>
+            <a href="#" id="post_link2">
+                <span class="blog_head">
+                    <h4>June 30.2014</h4>
+                    <h3>Websites - Wireframed</h3>
+                </span>
+            </a>
+
+            <span class="post 2" style="display:none;">
+                <p>A wireframe is a simplified blueprint of a screen design. Check out the wireframe versions of the websites I mentioned on my Technical Blog page. Click the image for a bigger version.</p>
+
+                <a href="../unit1_projects/images/spotify_wire.png" target="_blank">
+                    <img class="image" src="../unit1_projects/images/spotify_wire.png">
+                </a>
+                <p class="text">
+                    <b>Spotify.com</b> - There isn't much to read upon initial view. The home screen is to the point. It's main purpose is to draw in the viewer, as visitors of this website (as opposed to the application) are usually not yet subscribers. The huge image is followed by a potpourri of album art scattered about the bottom of the page. Because these smaller images are covered, it invites the user to scroll down: that's where the real presentation is made.
+                </p>
+
+                <a href="../unit1_projects/images/css-tricks_wire.png" target="_blank">
+                    <img class="image" src="../unit1_projects/images/css-tricks_wire.png">
+                </a>
+                <p class="text">
+                    <b>css-tricks.com</b> - One of the most appealing things about this site is the beautiful color scheme. The wireframe takes that away from us. What we now realize is that half of the view is basically header and nav bar. There isn't much in terms of content before scrolling down to read what you came for. There is considerable space dedicated to treehouse, so it's safe to assume they're in cahootz. Nevertheless, the simplicity of this layout is appealing.
+                </p>
+
+                <a href="../unit1_projects/images/github_wire.png" target="_blank">
+                    <img class="image" src="../unit1_projects/images/github_wire.png">
+                </a>
+                <p class="text">
+                    <b>GitHub.com</b> - I've somehow managed to make the GitHub visual experience even worse by reducing it to wireframe. See that huge gaping white space? That's what remains after closing the information boxes that used to be there upon first creating an account. Removing those boxes actually made the site easier to navigate because our eyes go straight for the good stuff, that is, our repositories. That's all we came for, I hope.
+                </p>
+
+                <footer>
+                    --- Week 1 ---
+                </footer>
+            </span>
+        </article>
+
+        <hr>
+
+        <article>
+            <a href="#" id="post_link1">
+                <span class="blog_head">
+                    <h4>June 29.2014</h4>
+                    <h3>Websites Worth a Visit</h3>
+                </span>
+            </a>
+
+            <span class="post 1" style="display:none;">
+                <a href="http://www.spotify.com" target="_blank">
+                    <img class="image" src="../unit1_projects/images/spotify.jpg">
+                </a>
+                <p class="text">
+                    <b>Spotify.com</b> is a music streaming site. I'm a paid subscriber and I use the app on my PC and smartphone every day. Spotify is the way to go for music because it allows you to listen to any song, album or artist on demand. Paid subscribers can download songs to their device to access when offline. Today I checked out the website as opposed to the downloaded app. As the face of the business, this is where Spotify has a chance to make a first impression in hopes of selling its service. The close-up, candid action shots convey a fun-loving attitude that isn't difficult to associate with music on the go. As an aspiring web developer, I am particularly impressed with the way the pictures scroll in tandem with text content. The foreground of text scrolls faster than the alternating photos of twenty-somethings livin' life, giving a stunning, yet humble suggestion that using Spotify is a good idea. Check out Spotify (at least the homepage)!
+                </p>
+
+                <a href="http://www.css-tricks.com" target="_blank">
+                    <img class="image" src="../unit1_projects/images/css-tricks.jpg">
+                </a>
+                <p class="text">
+                    <b>css-tricks.com</b> is a great site I discovered the other day, probably in the midst of frantically tryin to coax div-a and div-b to behave with div-c. I was instantly drawn to the design of this site. The colors are very appealing and entice the viewer to stay a while and explore. Something very clever I noticed in the design of this site was that it rearranges itself to three distinct layouts as you squish the width of the browser window. I'm not talking the default automatic stuff. The navigation tabs change shape and arrangement. The brown border between each box actually disappears to allow more concise viewing at the smallest with. This is the first time I've noticed such a reactive scheme on a web page. The footer of the site discloses that it was made on WordPress. Is that cheating? Either way, this site is both useful and beautiful.
+                </p>
+
+                <a href="http://www.github.com/explore" target="_blank">
+                    <img class="image" src="../unit1_projects/images/github.jpg">
+                </a>
+                <p class="text">
+                    <b>GitHub.com</b> is an online marketplace for developers to share code. I suppose non-developers could grab some code from GitHub as well, but the site is so overwhelming, I wouldn't want to go near it if I didn't have to. As a relatively new user, GitHub is like a dark basement with a noisy furnace; I'm only going down there to get a screwdriver or change the cat's litter box, and then I'm gone. In lieu of intimidation factor, GitHub is a fantastically practical tool for web development. I've attempted to show its bright and colorful side with a screenshot of the "Explore" page, but the truth is, GitHub is not bright and colorful. It is a confusing web of oversharing. Maybe it's nothing more than my own inexperience, but when it comes to GitHub I want to git what I came for and git out. Fortunately, I'd rather interact with GitHub from the safety of my command line.
+                </p>
+                <footer>
+                    --- Week 1 ---
+                </footer>
+            </span>
+        </article>
+
+    </section>
+
+    <section id="comment_section">
+        <article id="comment_article">
+            <a href="#" id="comment_box_link">
+                <span class="blog_head">
+                    <h4>Comments</h4>
+                    <h3>Drop a Line!</h3>
+                </span>
+            </a>
+
+            <span class="comment_box" style="display:none;">
+                <!-- begin htmlcommentbox.com -->
+                <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+                <script type="text/javascript" language="javascript" id="hcb">
+                /*<!--*/
+                if (!window.hcb_user) {
+                    hcb_user = {};
+                }(function() {
+                    s = document.createElement("script");
+                    s.setAttribute("type", "text/javascript");
+                    s.setAttribute("src", "http://www.htmlcommentbox.com/jread?page=" + escape((window.hcb_user && hcb_user.PAGE) || ("" + window.location)).replace("+", "%2B") + "&opts=470&num=10");
+                    if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
+                })(); /*-->*/
+                </script>
+                <!-- end htmlcommentbox.com -->
+            </span>
+        </article>
+    </section>
+
+    <script src="../scripts/posttoggle.js"></script>
 </body>
 
 </html>
