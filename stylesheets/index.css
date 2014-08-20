@@ -1,13 +1,13 @@
 @font-face {
     font-family: Beantown;
-    src: url(fonts/beantown/Beantown.ttf);
+    src: url(/fonts/beantown/Beantown.ttf);
     /*src: url(C:/Users/Sam/sspread.github.io/fonts/beantown/Beantown.ttf);*/
 }
 nav, h2, h3, h4, h5, h6, th, header, footer {
     font-family: "Lucida Sans Unicode", sans-serif
 }
 .bg-img {
-    background: url(images/108a.jpg) no-repeat fixed;
+    background: url(/images/108a.jpg) no-repeat fixed;
     /*background: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/108a.jpg) no-repeat fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
