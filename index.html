@@ -1,26 +1,367 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Boatz 'n' Blogz</title>
-<link rel="stylesheet" type="text/css" href="unit1_projects/stylesheets/index.css">
-<meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Boatz 'n' Blogz</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 
-<body>
 
-<header>
-<div id="name">Boatz 'n' Blogz</div>
-<nav>
-	<ul>
-		<li><a href="blog-posts/technical.html">Technical Blog</a></li>
-		<li><a href="blog-posts/cultural.html">DBC Culture</a></li>
-		<li><a href="projects/jungle_joe.html" id="projetsnav">Projects</a></li>
-	</ul>
-</nav>
+<body class="bg-img">
+
+    <section id="home" class="bg-img">
+        <div class="title">
+            <h1>Boatz 'n' Blogz</h1>
+        </div>
 
 
-</header>
+        <div id="home-nav-wrap">
+            <div class="container-fluid" id="home-nav">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a href="#tech" class="btn btn-default btn-lg" role="button">
+                        Technical Blog
+                    </a>
+                        <p><i>Educational discussions and examples about web development</i>
+                        </p>
+                    </div>
 
+                    <div class="col-sm-3">
+                        <a href="#culture" class="btn btn-default btn-lg" role="button">
+                        Cultural Blog
+                    </a>
+                        <p><i>Thoughts, feelings and other human things</i>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a href="#projects" class="btn btn-default btn-lg" role="button">
+                        Projects
+                    </a>
+                        <p><i>This is where Jungle Joe is hiding</i>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="#contact" class="btn btn-default btn-lg" role="button">
+                        Contact
+                    </a>
+                    <p><i>This is where I'm hiding</i></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="tech">
+
+        <div class="banner">
+            <div class="frosty bg-img"></div>
+            <div class="subtitle">
+                <h1>Tech</h1>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk8.html">Attacking Regular Expressions</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Some key points for understanding basic Regex.</blockquote>
+                    </div>
+                    <div class="panel-footer">August 14.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk7.html">SQL and the Seek to Know NoSQL</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Exploring some differences between the "older" and "newer" types of databases.</blockquote>
+                    </div>
+                    <div class="panel-footer">August 7.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk6.html">Proc Party!</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>An introduction to Procs, Blocks and lambdas in Ruby.</blockquote>
+                    </div>
+                    <div class="panel-footer">July 29.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk5.html">Dealing a Poker Hand in Ruby</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Some practice with Ruby classes and instance variables through a poker example.</blockquote>
+                    </div>
+                    <div class="panel-footer">July 23.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk4.html">Ruby's The Enumerables</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Let's take a look at Ruby's #group_by method, a member of the Enumerable family.</blockquote>
+                    </div>
+                    <div class="panel-footer">July 14.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk3.html">JavaScript</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>What is JavaScript? Why do we like it?</blockquote>
+                    </div>
+                    <div class="panel-footer">July 12.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk2.html">Learning CSS - Padding, Border and Margin</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Once and for all, I break down the subtle differences between these three web design attributes.</blockquote>
+                    </div>
+                    <div class="panel-footer">July 6.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk1-wire.html">Websites - Wireframed</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>I frame the websites from my last post in a bare bones schema to show the basic front end design.</blockquote>
+                    </div>
+                    <div class="panel-footer">June 30.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="tech/tech_wk1.html">Websites Worth a Visit</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>First post! I comment on the front-end design of three websites, as I take a stab at creating my own site.</blockquote>
+                    </div>
+                    <div class="panel-footer">June 29.2014</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="culture">
+
+        <div class="banner">
+            <div class="frosty bg-img"></div>
+            <div class="subtitle">
+                <h1>Culture</h1>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="culture/culture_wk8.html">When to Back Down</a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>I recount a conflict I had with a college instructor.</blockquote>
+                    </div>
+                    <div class="panel-footer">August 13.2014</div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="culture/culture_wk7.html">Values, etc.</a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>A time of self-reflection and why good health is of utmost importance.</blockquote>
+                    </div>
+                    <div class="panel-footer">August 6.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="culture/culture_wk6.html">Damn You, Stereotype Threat</a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Fight back against the fear of confirming negative stereotypes by becoming aware of it.</blockquote>
+                    </div>
+                    <div class="panel-footer">July 31.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="culture/culture_wk5.html">Pair Programming</a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Pair programming is big at Dev Bootcamp. Here are some things I like, and some things I don't like about it.</blockquote>
+                    </div>
+                    <div class="panel-footer">July 21.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="culture/culture_wk4.html">The Tech Gender Gap... Problem?</a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Google recently quantified the lopsidedness of tech jobs, and is committing $50 million as a remedy. Is this really the best reaction to these statistics?</blockquote>
+                    </div>
+                    <div class="panel-footer">July 15.2014</div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="culture/culture_wk3.html">Thinking and Learning about Thinking and Learning</a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>Ever think about how you solve problems or view the world? We aren't all the same.</blockquote>
+                    </div>
+                    <div class="panel-footer">July 10.2014</div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="culture/culture_wk1.html">Pep Talk</a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>DBC Co-Founder Shereef Bishay provides an inside look into the "kitchen".</blockquote>
+                    </div>
+                    <div class="panel-footer">June 30.2014</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <div class="banner">
+            <div class="frosty bg-img"></div>
+            <div class="subtitle">
+                <h1>Projects</h1>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="col-sm-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><a href="projects/jungle_joe.html">Jungle Joe</a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>A simple web game using JavaScript. Happy hunting!</blockquote>
+                    </div>
+                    <div class="panel-footer">July 14.2014</div>
+                </div>
+            </div>
+
+            <div class="col-sm-9" style="visibility: hidden;">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">TEMPLATE -Place Holder Hack</h3>
+                    </div>
+                    <div class="panel-body">
+                        <blockquote>TEMPLATE</blockquote>
+                    </div>
+                    <div class="panel-footer">2014</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="banner">
+            <div class="frosty bg-img"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="subtitle">
+                        <h1>Contact</h1>
+                    </div>
+                    <div class="contact-buttons">
+                        <div class="col-sm-3">
+                            <a href="https://plus.google.com/117925567488555774987/posts">Google+</a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://github.com/sspread">GitHub</a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://www.linkedin.com/pub/sam-spread/1a/a20/396">LinkedIn</a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://twitter.com/scspread">Twitter</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script>
+    $('#home-nav-wrap').height($('#home-nav').height());
+    $('#home-nav').affix({
+        offset: $('#home-nav').position()
+    });
+    </script>
 </body>
-
 </html>

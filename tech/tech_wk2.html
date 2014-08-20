@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boatz'n'Blogz</title>
+    <link rel="stylesheet" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body class="bg-img">
+
+    <!-- _______________Bootstrap Nav _____________ -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Boatz 'n' Blogz</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html#tech">Tech</a>
+                    </li>
+                    <li><a href="../index.html#culture">Culture</a>
+                    </li>
+                    <li><a href="../projects/jungle_joe.html">Projects</a>
+                    </li>
+                    <!-- Contact Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://plus.google.com/117925567488555774987/posts">Google+</a>
+                            </li>
+                            <li><a href="https://github.com/sspread">GitHub</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/pub/sam-spread/1a/a20/396">LinkedIn</a>
+                            </li>
+                            <li><a href="https://twitter.com/scspread">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- RIGHT SIDE NAV POST TOGGLE -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="tech_wk3.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>Later Post</a>
+                    </li>
+                    <li><a href="tech_wk1-wire.html">Earlier Post<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- _________________End Bootstrap Nav_________________ -->
+
+    <div class="col-sm-9">
+        <article>
+                    <h2>Learning CSS - Padding, Border and Margin</h2>
+                    <h4><small>July 6.2014</small></h4>
+
+                <img class="image" src="../images/margin.jpg" style="float: left; padding-bottom:0;">
+
+                <p>
+                    The skeleton of a web site is constructed from HTML. Instead of bones, HTML defines all of its elements as boxes. Then comes CSS to flesh out the web site and make it beautiful. CSS uses the box model to wrap layers around the box defined by HTML. Each of these layers has unique properties.
+                </p>
+                <p>
+                    <b>Content</b> is at the center of the box model. We can see content in blue. Content is the box that holds holds the site's text and images.
+                </p>
+                <p>
+                    <b>Padding</b> creates a space around the content. Padding takes the background color defined by the content. The brown highlights that appear around the menu items on this page upon hover are created by padding.
+                </p>
+                <p>
+                    <b>Border</b> surrounds the padding and content. It takes the color and design (i.e. solid, dotted, rounded corners) defined by the content. The blue underline on the header of this page is created with a border surrounding only the bottom of the header box.
+                </p>
+                <p>
+                    <b>Margin</b> establishes an invisible force field around the whole package. The blank space above the navigation bar and on either side of the main content of this page are created by margins.
+                </p>
+                <p>
+                    Note: the differences between padding, border and margin can be be unclear because they can be used interchangeably at times. For example, I could indent the title of this page "Tech" by using left margin or left padding. This is possible because there is no border around the content and we are not dealing with different background colors.
+                </p>
+                <p>
+                    Finally, the thickness of each layer begins at the inner layer and extends outwards. When designing a web site, remember that the actual height and width of an element is the sum of the content, plus the layers added by padding, border and margin.
+                </p>
+
+                <footer>
+                    --- Week 2 ---
+                </footer>
+        </article>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boatz'n'Blogz</title>
+    <link rel="stylesheet" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body class="bg-img">
+
+    <!-- _______________Bootstrap Nav _____________ -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Boatz 'n' Blogz</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html#tech">Tech</a>
+                    </li>
+                    <li><a href="../index.html#culture">Culture</a>
+                    </li>
+                    <li><a href="../projects/jungle_joe.html">Projects</a>
+                    </li>
+                    <!-- Contact Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://plus.google.com/117925567488555774987/posts">Google+</a>
+                            </li>
+                            <li><a href="https://github.com/sspread">GitHub</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/pub/sam-spread/1a/a20/396">LinkedIn</a>
+                            </li>
+                            <li><a href="https://twitter.com/scspread">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- RIGHT SIDE NAV POST TOGGLE -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="disabled">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-chevron-left"></span>Later Post</a>
+                    </li>
+                    <li><a href="tech_wk7.html">Earlier Post<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- _________________End Bootstrap Nav_________________ -->
+
+<div class="parallax">
+    <div class="parallax_group">
+        <div class="parallax_layer parallax_layer-back bg-img">TEST</div>
+
+<div class="parallax_layer parallax_layer-base">
+    <div class="col-sm-9">
+
+        <article>
+            <h2>Attacking Regular Expressions</h2>
+            <h4>
+                <small>August 14.2014</small>
+            </h4>
+
+            <p>Regular expressions can frighten new programmers because they resemble monsters with teeth made from backslashes and forward slashes. In this journey, I aim to befriend this beast by learning about it.</p>
+
+            <p>A regular expression (regex or regexp) defines a pattern by which to compare a string. In a world cluttered with too much information (TMI), it isn't difficult to appreciate the parsing power of regexes. As I researched regexes, they became less scary, and, I had a realization: there are a ton of resources on the web that can explain regexes better and more thoroughly than yours truly. So, in an effort to make the most of your time, I've made this blog post a potpourri of miniature <i>Aha!</i> moments, potential pitfalls and other big ideas that I discovered in my quest for understanding basic regex.</p>
+            <ul>
+                <li>Ruby's
+                    <span class="code">/.../</span>and
+                    <span class="code">%r{...}</span>are the same thing. They are delimiters that surround the regex to tell Ruby that what's inside is, in fact, a regex. Other programming languages may have different syntax. Simply knowing
+                    <span class="code">/.../</span>makes reading regex syntax more manageable, but this notation necessitates <i>escaping</i> any other forward slashes in the regex sequence.</li>
+
+                <li>The escape character
+                    <span class="code">\</span>is perhaps the foremost toothy culprit for regex's unsightliness. Most characters in regex are <i>literal</i>, meaning that they seek to match themselves in the string. But, some characters are special <i>metacharacters</i> in regex; they represent a regex rule. The
+                    <span class="code">\</span>simply turns a special character into a literal character. The next bullet point provides an example of how the
+                    <span class="code">\</span>can also escape a literal character into a special character!</li>
+
+                <li>Metacharacters (i.e
+                    <span class="code">\w</span>,
+                    <span class="code">\s</span>and
+                    <span class="code">\d</span>) act as shorthand equivalents for the POSIX bracket expressions, similar to character classes mentioned below, denoted with double brackets and colons (i.e.
+                    <span class="code">[[:word:]]</span>,
+                    <span class="code">[[:space:]]</span>
+                    <span class="code">[[:digit:]]</span>, respectively). These bracket expressions also match non-ASCII characters.</li>
+
+                <li>A character class, established with brackets
+                    <span class="code">[ ]</span>, is like a whole basket of characters that regex can use to make a match. Regex finds a match if <i>any</i> of the characters in the character class match the string's character.</li>
+
+                <li>Ruby uses
+                    <span class="code">=~</span>and
+                    <span class="code">#match</span>to make match magic.
+                    <span class="code">=~</span>returns the character index where the match began, while
+                    <span class="code">#match</span>returns a MatchData object, which is a package of results of a pattern match, including the original regexp! Both methods return
+                    <span class="code">nil</span>for no match, and neither method cares what comes first: regex or string.</li>
+
+                <li>The caret
+                    <span class="code">^</span>is a special character (anchor) that dictates that the match must come at the beginning of the string. Otherwise, the match could begin anywhere. Similarly, the dolla sign
+                    <span class="code">$</span>is an anchor for the <i>end</i> of the string. But take note! The
+                    <span class="code">^</span>inside the
+                    <span class="code">[ ]</span>of a character class acts instead as a NOT operator, matching any character <i>except</i> those in the character class.</li>
+
+                <li>Regex is greedy when it comes to repetition. Quantifiers (i.e.
+                    <span class="code">*</span>or
+                    <span class="code">+</span>) allow regex to match the character more than zero or more than one time, respectively. By default, even once the regex matches the string, regex will keep matching characters along the string until it reaches a character that would kill the match. Placing a
+                    <span class="code">?</span>after these quantifiers will make it <i>lazy</i>, that is, limit the repetition to zero or one. Let's conclude with an example... The dot
+                    <span class="code">.</span>means "any character".
+                    <br>
+                    <br>
+                    <p class="code">
+                        /.*te.*/.match("This regex is definitely greedy.")
+                        <br>
+                        <span class="output">=> #&#60MatchData "This regex is definitely greedy."&#62</span>
+                        <br>/.*te.*?/.match("This regex is definitely greedy.")
+                        <br>
+                        <span class="output">=> #&#60MatchData "This regex is definite"&#62</span>
+                    </p>
+                </li>
+            </ul>
+
+            <p>The regex concepts beyond what I've discussed here I'm going to deem "intermediate". I hope my rambling is helpful as a supplement to fill in the gaps when learning regex. The <a href="http://www.ruby-doc.org/core-2.1.1/Regexp.html#class-Regexp-label-Repetition" target="_blank">Ruby Docs</a> are a big-time resource for regex in the context of Ruby.</p>
+
+            <footer>--- Week 8 ---</footer>
+        </article>
+    </div>
+
+</div>
+</div>
+</div>
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

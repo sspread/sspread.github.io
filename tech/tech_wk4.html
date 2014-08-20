@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boatz'n'Blogz</title>
+    <link rel="stylesheet" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body class="bg-img">
+
+    <!-- _______________Bootstrap Nav _____________ -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Boatz 'n' Blogz</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html#tech">Tech</a>
+                    </li>
+                    <li><a href="../index.html#culture">Culture</a>
+                    </li>
+                    <li><a href="../projects/jungle_joe.html">Projects</a>
+                    </li>
+                    <!-- Contact Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://plus.google.com/117925567488555774987/posts">Google+</a>
+                            </li>
+                            <li><a href="https://github.com/sspread">GitHub</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/pub/sam-spread/1a/a20/396">LinkedIn</a>
+                            </li>
+                            <li><a href="https://twitter.com/scspread">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- RIGHT SIDE NAV POST TOGGLE -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="tech_wk5.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>Later Post</a>
+                    </li>
+                    <li><a href="tech_wk3.html">Earlier Post<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- _________________End Bootstrap Nav_________________ -->
+
+    <div class="col-sm-9">
+        <article>
+            <h2>Ruby's The Enumerables</h2>
+            <h4>
+                <small>July 14.2014</small>
+            </h4>
+
+            <p>An enumerable is collection of information that is able to be enumerated. To enumerate means to process the elements in the collection, piece by piece. You might feel like an enumerable at the DMV.</p>
+
+            <p>Now, Ruby has its own idea of enumerables, not unlike our English definition above. But, it's a little confusing when you first learn it, as I myself am doing along with you. Let me ramble off my understanding now. This is not for you; it is for me. Ahem...</p>
+
+            <p>If you ask ruby what class <i>Enumerable</i> is
+                <span class="code">Enumerable.class</span>, it will return
+                <span class="code output">Module</span>. It is used as a mixin in the Array class. Modules group together methods, classes and constants. Modules are similar to classes in this way, but you cannot create objects based on modules. Modules provide a namespace and allow you to share the functionality of instance methods between classes (mixins). <i>Enumerator</i> is a <i>Class</i> class. The Array class returns an <i>Enumerator</i> object when no block is given to <i>#each</i>. The <i>Enumerator</i> allows us to chain methods together indefinitely, as the previous chained methods will not be given blocks.</p>
+
+            <p>OK back to what we really came here to do. Let's discuss the <i>Enumerable#group_by</i> method. <i>#group_by</i> groups a collection by the criteria provided in the block. It returns a hash where each key represents a group whose values are an array containing its members.</p>
+
+            <p>An example...</p>
+
+            <p class="code">
+                fish_names = ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]
+                <br>fish_names.group_by{|name| name.length}
+                <br>
+                <span class="output">=> {4=>["Nemo", "Glut", "Dory"], 5=>["Bruce", "Coral"], 6=>["Marlin", "Blenny"]}</span>
+            </p>
+
+            <p><i>#group_by</i> grouped the names by their length, as specified in the block. Now let's omit the block and see what ruby returns...</p>
+
+            <p class="code">fish_names.group_by
+                <br>
+                <span class="output">=> #(Enumerator: ["Nemo", "Bruce", "Marlin", "Glut", "Dory", "Coral", "Blenny"]:group_by)</span>
+            </p>
+
+            <p>Now we could store that <i>Enumerator</i> as a variable and save it for later. What use is this <i>#group_by</i> Enumerator without any grouping criteria? I have no idea.</p>
+
+            <footer>
+                --- Week 4 ---
+            </footer>
+        </article>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boatz'n'Blogz</title>
+    <link rel="stylesheet" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body class="bg-img">
+
+    <!-- _______________Bootstrap Nav _____________ -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Boatz 'n' Blogz</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html#tech">Tech</a>
+                    </li>
+                    <li><a href="../index.html#culture">Culture</a>
+                    </li>
+                    <li><a href="../projects/jungle_joe.html">Projects</a>
+                    </li>
+                    <!-- Contact Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://plus.google.com/117925567488555774987/posts">Google+</a>
+                            </li>
+                            <li><a href="https://github.com/sspread">GitHub</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/pub/sam-spread/1a/a20/396">LinkedIn</a>
+                            </li>
+                            <li><a href="https://twitter.com/scspread">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- RIGHT SIDE NAV POST TOGGLE -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="tech_wk6.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>Later Post</a>
+                    </li>
+                    <li><a href="tech_wk4.html">Earlier Post<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- _________________End Bootstrap Nav_________________ -->
+
+    <div class="col-sm-9">
+
+
+        <article>
+            <h2>Dealing a Poker Hand in Ruby</h2>
+            <h4>
+                <small>July 23.2014</small>
+            </h4>
+
+            <p>In this piece, I'm going to run through a short Ruby program I wrote to deal a hand of poker. I will discuss classes and instance variables, among other concepts. Let's take it step by step.</p>
+
+            <img class="image_full" src="../images/poker_initialize.PNG">
+            <br>
+
+            <p>First, we must define a new
+                <span class="code">class PokerHand</span>as a blueprint to contain our methods and characterisics pertaining to a hand of poker. The first method in a new class is always going to be
+                <span class="code">#initialize</span>. When you create a new instance of the class PokerHand (i.e. an individual hand), you call
+                <span class="code">#new</span>on the class, which automatically looks for and executes
+                <span class="code">#initialize</span>within the class definition. Let's do that now.</p>
+
+            <p class="code">
+                hand1=PokerHand.new(5)
+                <br>
+                <span class="output">=> There are 5 players.</span>
+            </p>
+
+            <p>We put a
+                <span class="code">5</span>as the argument when creating the new class, which is interpreted by
+                <span class="code">#initialize</span>as the number of players in our game. Behind the scenes,
+                <span class="code">#initialize</span>also created a deck of cards, shuffled them, and dealt two to each player! I know, you want to see what you were dealt, right? Let's write another method to access the array value of the
+                <span class="code">:hero</span>hash key.</p>
+
+            <img class="image_full" src="../images/poker_hero_hand.PNG">
+            <br>
+            <p span class="code">
+                hand1.hero_hand
+                <br>
+                <span class="output">=> Your hand is ["6c", "6s"]</span>
+            </p>
+
+            <p>Not bad, pocket 6's! See the '@' attached to our
+                <span class="code">@players</span>hash variable? That makes it an <i>instance variable</i> that our program can access across methods in our new PokerHand class, so long as it pertains to the same instance (i.e.
+                <span class="code">hand1</span>). Let's skip the betting for now and see a flop!</p>
+
+            <img class="image_full" src="../images/poker_flop.PNG">
+            <br>
+            <p class="code">
+                hand1.flop
+                <br>
+                <span class="output">=> Flop: ["Ac", "3s", "Jc"]</span>
+            </p>
+
+            <p>Probably not the flop we wanted to see, but our program is working! Let's write one more method to see our opponent's hands.</p>
+
+            <img class="image_full" src="../images/poker_villain_hand.PNG">
+            <br>
+            <p class="code">
+                hand1.villain_hand(:two)
+                <br>
+                <span class="output">=> private method 'villain_hand' called for #(PokerHand:0x2c92248) (NoMethodError)</span>
+            </p>
+
+            <p>Not so fast! I told Ruby that
+                <span class="code">#villain_hand</span>is
+                <span class="code">private</span>. This means that only our program can access this method and see player two's hand (or any of our opponent's hands, for that matter). We might have our program call this private method later on when we extend it to find out who wins, but that's for another day.</p>
+
+            <footer>
+                --- Week 5 ---
+            </footer>
+        </article>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

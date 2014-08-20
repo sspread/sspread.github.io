@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boatz'n'Blogz</title>
+    <link rel="stylesheet" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body class="bg-img">
+
+    <!-- _______________Bootstrap Nav _____________ -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Boatz 'n' Blogz</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html#tech">Tech</a>
+                    </li>
+                    <li><a href="../index.html#culture">Culture</a>
+                    </li>
+                    <li><a href="../projects/jungle_joe.html">Projects</a>
+                    </li>
+                    <!-- Contact Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://plus.google.com/117925567488555774987/posts">Google+</a>
+                            </li>
+                            <li><a href="https://github.com/sspread">GitHub</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/pub/sam-spread/1a/a20/396">LinkedIn</a>
+                            </li>
+                            <li><a href="https://twitter.com/scspread">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- RIGHT SIDE NAV POST TOGGLE -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="tech_wk4.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>Later Post</a>
+                    </li>
+                    <li><a href="tech_wk2.html">Earlier Post<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- _________________End Bootstrap Nav_________________ -->
+
+    <div class="col-sm-9">
+
+        <article>
+            <h2>JavaScript in Web Development</h2>
+            <h4>
+                <small>July 12.2014</small>
+            </h4>
+
+            <p>
+                <b>JavaScript is a computer language</b> commonly used in web development. To understand JavaScript's role in the web, we must first establish a concept called client-side programming. The client is the computer that communicates with the server. You might think of the client as your laptop. Instead of only pointing to a file, the web server can run a program process the file before sending it to the client. This makes the web more dynamic. Alternatively, the <i>client</i> can run that program to process the file after it receives it. This client-side program is written in JavaScript. Let's look at some features and pitfalls.
+            </p>
+            <span class="text">
+                <p>
+                    <b>We like JavaScript!</b>
+                    <ul>
+                        <li><i>JavaSript is fast.</i> It executes on the client side and reduces strain on the web server and saves bandwith.</li>
+                        <li><i>JavaScript is compatible.</i> It interacts with the user's web browser, so it is supported on any platform that supports that browser.</li>
+                        <li><i>JavaScript is easy.</i> It uses the DOM model so it can already recognize the objects on web pages.</li>
+                        <li><i>JavaScript is extendible</i>. Developers can write snippets that users can download that will interact with certain web pages and enhance functionality.</li>
+                    </ul>
+                </p>
+            </span>
+
+            <span class="text">
+                <p>
+                    <b>Not so fast...</b>
+                    <ul>
+                        <li><i>JavaSript can be dangerous.</i> Developers can write JavaScript programs that execute on the client's computer to do something that the user did not intend. The program could attack the client's system and/or send out private information. Although browsers limit JavaScripts, capabilities, malicious developers periodically find ways to circumvent the rules.</li>
+                        <li><i>JavaScript can be inconsistent across browsers.</i> Because JavaScript relies on the end user, developers cannot perfectly tailor their programs to varying browsers, settings and general environments.</li>
+                    </ul>
+                </p>
+            </span>
+
+            <footer>
+                --- Week 3 ---
+            </footer>
+        </article>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

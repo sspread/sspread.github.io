@@ -1,0 +1,123 @@
+body{
+    font-family: "Lucida Fax", serif;
+    background-color: #5C5C2E;
+}
+nav, h1, h2, h3, h4, h5, h6, th, header, footer {
+    font-family: "Lucida Sans Unicode", sans-serif
+}
+
+article h4 {margin-left: 2px;}
+
+article {
+    box-shadow: 4px 4px 15px #1A1A00;
+    padding: 1% 5%;
+    background-color: #F0F0EB;
+    border: 6px solid #D6EBFF;
+    border-radius: 5px;
+    color: inherit;
+    margin: 20px 30px;
+}
+
+    
+.navbar, .navbar-brand {background-color: #AEBFCF;
+font-size: 110%; border: none; border-radius: 0;}
+
+.navbar-right {font-size: 85%}
+
+.navbar-brand {font-weight: bold;}
+
+/*.navbar-default .navbar-nav > li > a {color:;}*/
+
+.navbar-default .navbar-nav > li > a:focus {color: #777;}
+.navbar-default .navbar-nav > li > a:hover {color: #333;}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus  {background-color: #D6EBFF;}
+
+.navbar-default .navbar-nav > .active > a:hover {background-color: #C1D4E6;
+color: #333;}
+
+article p a {
+    color: purple;
+    text-decoration: none;
+}
+
+h4:first-of-type {margin-bottom: 40px;}
+
+.code+p {margin-top: 12px;}
+
+article .text {
+    width: 49%;
+    margin: auto;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 3%;
+}
+.image_full {
+    width: 85%;
+    display: block;
+    margin: 12px auto;
+}
+
+.image {
+    width: 49%;
+    color: inherit;
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    padding-left: .5%;
+    padding-right: .5%;
+}
+article li {
+    padding: 7px 0px;
+}
+.code {
+    background-color: #f8f8f8;
+    color: black;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 1px 4px;
+    margin: 0 3px;
+    box-shadow: inset 0 0 2px #5C85D6;
+}
+.output {
+    color: #cf1717;
+}
+
+.values {
+    margin: auto;
+    border-radius: 15px;
+    text-align: center;
+    border: solid purple 2px;
+    width: 45%;
+}
+
+.values td {
+    font-size: .95em;
+}
+footer {
+    text-align: center;
+    padding-bottom: .1em;
+    font-size: .8em;
+    width: 100%;
+    opacity: .9;
+}
+
+/*---------------Media Queries-----------------*/
+
+@media screen and (max-width: 600px) {
+
+    .image {
+        width: 100%;
+        margin: auto;
+        padding-bottom: 3%;
+        padding-left: .5%;
+        padding-right: .5%;
+    }
+    .image_full {
+        width: 100%;
+    }
+}
