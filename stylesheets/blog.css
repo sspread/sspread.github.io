@@ -54,7 +54,7 @@ h4:first-of-type {
 .code+p {
     margin-top: 12px;
 }
-article .text {
+.text {
     width: 49%;
     margin: auto;
     display: inline-block;
@@ -121,5 +121,6 @@ footer {
     .image_full {
         width: 100%;
     }
-    article {margin: 20px 0 px;}
+    .text {width: 100%;}
+    article {margin: 20px 0px;}
 }
