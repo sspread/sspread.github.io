@@ -65,84 +65,48 @@
 
     <!-- _________________End Bootstrap Nav_________________ -->
 
-<div class="parallax">
-    <div class="parallax_group">
-        <div class="parallax_layer parallax_layer-back bg-img">TEST</div>
+    <div class="parallax">
+        <div class="parallax_group">
+            <div class="parallax_layer parallax_layer-back bg-img">TEST</div>
 
-<div class="parallax_layer parallax_layer-base">
-    <div class="col-sm-9">
+            <div class="parallax_layer parallax_layer-base">
+                <div class="col-sm-9">
 
-        <article>
-            <h2>Attacking Regular Expressions</h2>
-            <h4>
-                <small>August 14.2014</small>
-            </h4>
+                    <article>
+                        <h2>Website Redesign (aka Whack-a-Mole)</h2>
+                        <h4>
+                            <small>August 21.2014</small>
+                        </h4>
+                        <p>I recently dedicated a few days to redesigning this blog site. I had made significant changes probably five or six times already, but this time was a complete overhaul. I want to mention a few things about the process.</p>
 
-            <p>Regular expressions can frighten new programmers because they resemble monsters with teeth made from backslashes and forward slashes. In this journey, I aim to befriend this beast by learning about it.</p>
+                        <h4>What Needed to Change</h4>
+                        <p>Previously, all of my blog posts for each category (i.e. tech, culture and projects) were on a single HTML page. I had made the posts collapsible to only show the headings, so that one page served as both a list of blog titles, and a place for the content of each. As I added to this page, I realized the HTML page was getting a too big and rather inflexible. I wanted to separate each post to its own page, but then I'd need an archive page. I looked back at my homepage and realized it was pretty unnecessary: it merely provided links to the other 3 pages, each of which did the same thing. So, I wanted to add some functionality to it. Finally, I needed to add a "contact" section somewhere.</p>
 
-            <p>A regular expression (regex or regexp) defines a pattern by which to compare a string. In a world cluttered with too much information (TMI), it isn't difficult to appreciate the parsing power of regexes. As I researched regexes, they became less scary, and, I had a realization: there are a ton of resources on the web that can explain regexes better and more thoroughly than yours truly. So, in an effort to make the most of your time, I've made this blog post a potpourri of miniature <i>Aha!</i> moments, potential pitfalls and other big ideas that I discovered in my quest for understanding basic regex.</p>
-            <ul>
-                <li>Ruby's
-                    <span class="code">/.../</span>and
-                    <span class="code">%r{...}</span>are the same thing. They are delimiters that surround the regex to tell Ruby that what's inside is, in fact, a regex. Other programming languages may have different syntax. Simply knowing
-                    <span class="code">/.../</span>makes reading regex syntax more manageable, but this notation necessitates <i>escaping</i> any other forward slashes in the regex sequence.</li>
+                        <h4>Bootstrappin'</h4>
+                        <p>The guys at Twitter graciously provided a front-end design framework that has become quite popular among developers. The CSS file was over 6000 lines long. I decided to download the CSS and JS files and give it a shot. A bit of a lot to chew at first. To really understand the framework, you'd have read the lengthy documentation and experiment with it. So, I set up the Bootstrap CSS file in one window and my own HTML and CSS file in the other. As I thought of new design ideas I searched through the docs and CSS to see what tools were available to help me achieve my design goals.</p>
 
-                <li>The escape character
-                    <span class="code">\</span>is perhaps the foremost toothy culprit for regex's unsightliness. Most characters in regex are <i>literal</i>, meaning that they seek to match themselves in the string. But, some characters are special <i>metacharacters</i> in regex; they represent a regex rule. The
-                    <span class="code">\</span>simply turns a special character into a literal character. The next bullet point provides an example of how the
-                    <span class="code">\</span>can also escape a literal character into a special character!</li>
+                        <p>The grid styling provided an excellent framework for setting page items out in an organized and responsive fashion. I ended up placing most of the elements on my site in one of the grid divs. But of course, I wanted to customize everything so it didn't look like it came straight out of the Bootstrap box. Doing so was a complex process. I had to sift through the Bootstrap CSS to figure out how each element behaved, and then override it as necessary in my own CSS file.</p>
 
-                <li>Metacharacters (i.e
-                    <span class="code">\w</span>,
-                    <span class="code">\s</span>and
-                    <span class="code">\d</span>) act as shorthand equivalents for the POSIX bracket expressions, similar to character classes mentioned below, denoted with double brackets and colons (i.e.
-                    <span class="code">[[:word:]]</span>,
-                    <span class="code">[[:space:]]</span>
-                    <span class="code">[[:digit:]]</span>, respectively). These bracket expressions also match non-ASCII characters.</li>
+                        <p>I ended up modifying almost everything that I did use from Bootstrap. One of the tools I changed minimally was the nav bar framework for the individual blog pages. Boostrap provided the CSS and JS for its nav bar to collapse for mobile into a drop-down menu that I found incredibly useful. Ultimately I treated Bootstrap as a toolbox more than a framework for my site. I utilized bits and pieces as I went along, but never let it dictate my design.</p>
 
-                <li>A character class, established with brackets
-                    <span class="code">[ ]</span>, is like a whole basket of characters that regex can use to make a match. Regex finds a match if <i>any</i> of the characters in the character class match the string's character.</li>
+                        <h4>Challenges</h4>
+                        <p>One of the toughest design challenges I faced was the background image. I realize that a lot of sites do not have a full scrolling page background image, and I think maybe that is because it can be buggy and difficult to work in concert with the content. However, I wanted to give it a shot. The background image is actually fixed in the HTML body. The hazy section banners are separate background images with non-blurred content divs on top. The banner design was a relatively simple hack that I figured out after only seeing complex methods online. The whole combination makes it look like hazy bars scroll seamlessly over the constant background.</p>
 
-                <li>Ruby uses
-                    <span class="code">=~</span>and
-                    <span class="code">#match</span>to make match magic.
-                    <span class="code">=~</span>returns the character index where the match began, while
-                    <span class="code">#match</span>returns a MatchData object, which is a package of results of a pattern match, including the original regexp! Both methods return
-                    <span class="code">nil</span>for no match, and neither method cares what comes first: regex or string.</li>
+                        <p>Another challenge was implementing the sticky header buttons. This was a feature I had seen on other sites and really wanted to utilize it on my own. The home buttons stick to a fixed position on the top of the page once you scroll far enough down. A little JavaScript magic made this possible. But then I had to make them transparent and small to not step on the content. You can probably see how this becomes an endless redesign process</p>
 
-                <li>The caret
-                    <span class="code">^</span>is a special character (anchor) that dictates that the match must come at the beginning of the string. Otherwise, the match could begin anywhere. Similarly, the dolla sign
-                    <span class="code">$</span>is an anchor for the <i>end</i> of the string. But take note! The
-                    <span class="code">^</span>inside the
-                    <span class="code">[ ]</span>of a character class acts instead as a NOT operator, matching any character <i>except</i> those in the character class.</li>
+                        <h4>What Still Needs to Change</h4>
+                        <p>I feel that I was mostly successful in separating my blog posts, making a home page that serves as an archive with blog summaries, and utilizing some cool features. In fact, I was very happy with my site until I uploaded it and viewed it on my Galaxy. Ugh. The background effects don't look like they did on the computer. The nav buttons are too big. The margins are too wide. And on the iPhone, the initial home page view is all stretched out. I can adjust the margins and button placement for media queries, but I may have to scrap the background image for mobile sanity.</p>
 
-                <li>Regex is greedy when it comes to repetition. Quantifiers (i.e.
-                    <span class="code">*</span>or
-                    <span class="code">+</span>) allow regex to match the character more than zero or more than one time, respectively. By default, even once the regex matches the string, regex will keep matching characters along the string until it reaches a character that would kill the match. Placing a
-                    <span class="code">?</span>after these quantifiers will make it <i>lazy</i>, that is, limit the repetition to zero or one. Let's conclude with an example... The dot
-                    <span class="code">.</span>means "any character".
-                    <br>
-                    <br>
-                    <p class="code">
-                        /.*te.*/.match("This regex is definitely greedy.")
-                        <br>
-                        <span class="output">=> #&#60MatchData "This regex is definitely greedy."&#62</span>
-                        <br>/.*te.*?/.match("This regex is definitely greedy.")
-                        <br>
-                        <span class="output">=> #&#60MatchData "This regex is definite"&#62</span>
-                    </p>
-                </li>
-            </ul>
+                        <h4>A Learning Experience</h4>
+                        <p>I could have predicted some of these mobile issues by resizing my computer browser, but other things came as a surprise. The whole redesign process feels a lot like playing Whack-a-Mole. As soon as I fix one issue, another pops up. And, there's always something can be improved. By using Bootstrap, but not following it too closely, I was able to add some cool features to my site without sacrificing uniqueness. However, in the attempt to customize and experiment, I lost some functionality. In any event, I can definitely say I improved my technical understanding by drilling into the code.</p>
 
-            <p>The regex concepts beyond what I've discussed here I'm going to deem "intermediate". I hope my rambling is helpful as a supplement to fill in the gaps when learning regex. The <a href="http://www.ruby-doc.org/core-2.1.1/Regexp.html#class-Regexp-label-Repetition" target="_blank">Ruby Docs</a> are a big-time resource for regex in the context of Ruby.</p>
+                        <footer>--- Week 9 ---</footer>
+                    </article>
+                </div>
 
-            <footer>--- Week 8 ---</footer>
-        </article>
+            </div>
+        </div>
     </div>
-
-</div>
-</div>
-</div>
 
 
 
