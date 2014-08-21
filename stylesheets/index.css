@@ -6,7 +6,7 @@
 nav, h2, h3, h4, h5, h6, th, header, footer {
     font-family: "Lucida Sans Unicode", sans-serif
 }
-.bg-img, .bg-pattern {
+.bg-img, .body-bg-img, .home-bg-img {
     background: url(/images/108a.jpg) no-repeat fixed;
     /*background: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/108a.jpg) no-repeat fixed;*/
     -webkit-background-size: cover;
@@ -15,7 +15,6 @@ nav, h2, h3, h4, h5, h6, th, header, footer {
     background-size: cover;
     background-position: 100% 0%;
 }
-
 
 
 
@@ -48,10 +47,10 @@ nav, h2, h3, h4, h5, h6, th, header, footer {
 }
 .frosty {
     -webkit-filter: contrast(90%) brightness(50%) blur(4px);
-    -moz-filter: contrast(90%) grayscale(50%) blur(4px);
-    -o-filter: contrast(90%) grayscale(50%) blur(4px);
-    -ms-filter: contrast(90%) grayscale(50%) blur(4px);
-    filter: contrast(90%) grayscale(50%) blur(4px);
+    -moz-filter: contrast(90%) brightness(50%) blur(4px);
+    -o-filter: contrast(90%) brightness(50%) blur(4px);
+    -ms-filter: contrast(90%) brightness(50%) blur(4px);
+    filter: contrast(90%) brightness(50%) blur(4px);
     height: 100%;
 }
 .title {
@@ -150,6 +149,11 @@ a:hover {
     position: relative;
     z-index: 2;
 }
+#contact a{color:#FFFF99;}
+#contact a:hover{text-shadow: 0px 0px 5px #fff;}
+
+
+
 /*Media Queries*/
 
 @media screen and (max-width: 768px) {
@@ -178,7 +182,7 @@ a:hover {
         float: right;
     }
     .contact-buttons .col-sm-3 {
-        right: 33.3333333%;
+        right: 0;
         text-align: right;
         padding-top: 6px;
         padding-bottom: 6px;
@@ -186,10 +190,20 @@ a:hover {
     #tech .container-fluid, #culture .container-fluid, #projects .container-fluid {
         padding: 30px 30px 30px 0px;
     }
-    .bg-img{
+    .bg-img, .body-bg-img{
         /*background-image: url(C:/Users/Sam/sspread.github.io/images/WCEIdz.PNG);*/
+        background-image: url(/images/WCEIdz.png);
         background-size: auto;
         background-repeat: repeat;
-        background-image: url(/images/WCEIdz.png);
-    }
+            }
+.frosty {
+    -webkit-filter: contrast(100%) brightness(170%) blur(1px) saturate(300%);
+    -moz-filter: contrast(90%)  blur(1px);
+    -o-filter: contrast(90%)  blur(1px);
+    -ms-filter: contrast(90%)  blur(1px);
+    filter: contrast(90%)  blur(1px);
+    height: 100%;
+}
+
+
 }
