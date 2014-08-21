@@ -6,7 +6,7 @@
 nav, h2, h3, h4, h5, h6, th, header, footer {
     font-family: "Lucida Sans Unicode", sans-serif
 }
-.bg-img {
+.bg-img, .bg-pattern {
     background: url(/images/108a.jpg) no-repeat fixed;
     /*background: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/108a.jpg) no-repeat fixed;*/
     -webkit-background-size: cover;
@@ -16,12 +16,9 @@ nav, h2, h3, h4, h5, h6, th, header, footer {
     background-position: 100% 0%;
 }
 
-.bg-pattern {
-        /*background-image: url(C:/Users/Sam/sspread.github.io/images/WCEIdz.PNG);*/
-        background-size: auto;
-        background-repeat: repeat;
-        background-image: url(/images/WCEIdz.png);
-    }
+
+
+
 #home {
     height: 100vh;
 }
