@@ -109,6 +109,7 @@ footer {
 }
 /*---------------Media Queries-----------------*/
 
+
 @media screen and (max-width: 600px) {
     .image {
         width: 100%;
@@ -120,4 +121,5 @@ footer {
     .image_full {
         width: 100%;
     }
+    article {margin: 20px 0 px;}
 }

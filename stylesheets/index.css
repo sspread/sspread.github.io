@@ -20,6 +20,8 @@ nav, h2, h3, h4, h5, h6, th, header, footer {
 }
 #tech, #culture, #projects, #contact {
     clear: both;
+    height: 100vh;
+    
 }
 #tech .container-fluid, #culture .container-fluid, #projects .container-fluid {
     float: left;
