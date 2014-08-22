@@ -155,8 +155,8 @@ a:hover {
 #collapser{
     display: none;
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 8px;
+    top: 10px;
 }
 /*Media Queries*/
 
@@ -180,12 +180,18 @@ a:hover {
     .subtitle h1 {
         font-size: 36px;
     }
-    #home-nav.affix .row {
+
+    #home-nav .row {
         position: absolute;
-        right: 5px;
-        top: 50px;
+        right: 25px;
+        bottom: 35px;
     }
-    #home-nav.affix .btn {
+    #home-nav.affix .row {
+        right:10px;
+        top: 50px;
+        bottom:auto;
+    }
+    #home-nav .btn {
         float: right;
     }
     .contact-buttons .col-sm-3 {
