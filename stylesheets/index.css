@@ -182,14 +182,12 @@ a:hover {
     }
 
     #home-nav .row {
-        position: absolute;
-        right: 25px;
-        bottom: 35px;
+float: right;
     }
     #home-nav.affix .row {
-        right:10px;
+        position: absolute;
+        right:8px;
         top: 50px;
-        bottom:auto;
     }
     #home-nav .btn {
         float: right;
