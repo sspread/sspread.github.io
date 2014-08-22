@@ -1,23 +1,20 @@
 @font-face {
     font-family: Beantown;
-    src: url(/fonts/beantown/Beantown.ttf);
-    /*src: url(C:/Users/Sam/sspread.github.io/fonts/beantown/Beantown.ttf);*/
+    /*src: url(/fonts/beantown/Beantown.ttf);*/
+    src: url(C:/Users/Sam/sspread.github.io/fonts/beantown/Beantown.ttf);
 }
 nav, h2, h3, h4, h5, h6, th, header, footer {
     font-family: "Lucida Sans Unicode", sans-serif
 }
 .bg-img, .body-bg-img, .home-bg-img {
-    background: url(/images/108a.jpg) no-repeat fixed;
-    /*background: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/108a.jpg) no-repeat fixed;*/
+    /*background: url(/images/108a.jpg) no-repeat fixed;*/
+    background: url(C:/Users/Sam/sspread.github.io/unit1_projects/images/108a.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-position: 100% 0%;
 }
-
-
-
 #home {
     height: 100vh;
 }
@@ -149,14 +146,24 @@ a:hover {
     position: relative;
     z-index: 2;
 }
-#contact a{color:#FFFF99;}
-#contact a:hover{text-shadow: 0px 0px 5px #fff;}
-
-
-
+#contact a {
+    color: #FFFF99;
+}
+#contact a:hover {
+    text-shadow: 0px 0px 5px #fff;
+}
+#collapser{
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
 /*Media Queries*/
 
 @media screen and (max-width: 768px) {
+    #home-nav.affix #collapser {
+        display: block;
+    }
     .btn {
         padding: 5px;
         margin-bottom: 13px;
@@ -176,7 +183,7 @@ a:hover {
     #home-nav.affix .row {
         position: absolute;
         right: 5px;
-        top: 5px;
+        top: 50px;
     }
     #home-nav.affix .btn {
         float: right;
@@ -190,20 +197,18 @@ a:hover {
     #tech .container-fluid, #culture .container-fluid, #projects .container-fluid {
         padding: 30px 30px 30px 0px;
     }
-    .bg-img, .body-bg-img{
-        /*background-image: url(C:/Users/Sam/sspread.github.io/images/WCEIdz.PNG);*/
-        background-image: url(/images/WCEIdz.png);
+    .bg-img, .body-bg-img {
+        background-image: url(C:/Users/Sam/sspread.github.io/images/WCEIdz.PNG);
+        /*background-image: url(/images/WCEIdz.png);*/
         background-size: auto;
         background-repeat: repeat;
-            }
-.frosty {
-    -webkit-filter: contrast(100%) brightness(170%) blur(1px) saturate(300%);
-    -moz-filter: contrast(90%)  blur(1px);
-    -o-filter: contrast(90%)  blur(1px);
-    -ms-filter: contrast(90%)  blur(1px);
-    filter: contrast(90%)  blur(1px);
-    height: 100%;
-}
-
-
+    }
+    .frosty {
+        -webkit-filter: contrast(100%) brightness(170%) blur(1px) saturate(300%);
+        -moz-filter: contrast(90%) blur(1px);
+        -o-filter: contrast(90%) blur(1px);
+        -ms-filter: contrast(90%) blur(1px);
+        filter: contrast(90%) blur(1px);
+        height: 100%;
+    }
 }
