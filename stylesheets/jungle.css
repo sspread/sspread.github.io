@@ -10,13 +10,16 @@ table td {
     border-radius: 18px;
 }
 
+td:hover, td:visited{background-color: red;}
+
 th {
     font-size: 1.2em;
+    text-align: center;
 }
 
 
 #joe {
-    background-color: red;
+    background-color: #990000 ;
     border-radius: 10px;
     margin-left: 10%;
     font-size: 1.3em;
@@ -27,6 +30,7 @@ th {
 
 #strike_spot {
     padding-left: 28%;
+    padding-right: 0;
     text-align: center;
     font-size: 1.4em;
     margin: auto;
@@ -47,7 +51,7 @@ th {
 }
 #strike {
     font-weight: bold;
-    padding: .8em;
+    padding: em;
 }
 .stats {
     padding: 0 1em;
@@ -69,8 +73,6 @@ th {
 
 
 .container-fluid{
-	width: 340px;
-	color:inherit;
 	margin: auto;
 	padding-bottom: 3%;
 	padding-left: .5%;
