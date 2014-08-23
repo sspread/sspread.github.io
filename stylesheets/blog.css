@@ -1,9 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto);
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #5C5C2E;
 }
-nav, h1, h2, h3, h4, h5, h6, th, header, footer {
+.panel-footer, .contact-buttons, nav, h1, h2, h3, h4, h5, h6, th, header, footer {
     font-family: "Gloria Hallelujah", cursive;
 }
 article h4 {
