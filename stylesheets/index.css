@@ -201,8 +201,8 @@ a:hover {
         padding: 30px 30px 30px 0px;
     }
     .bg-img, .body-bg-img {
-        background-image: url(C:/Users/Sam/sspread.github.io/images/gBX6SQ.PNG);
-        /*background-image: url(/images/gBX6SQ.png);*/
+        /*background-image: url(C:/Users/Sam/sspread.github.io/images/gBX6SQ.PNG);*/
+        background-image: url(/images/gBX6SQ.png);
         background-size: auto;
         background-repeat: repeat;
     }
