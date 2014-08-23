@@ -1,10 +1,7 @@
-@font-face {
-    font-family: Beantown;
-    src: url(/fonts/beantown/Beantown.ttf);
-    /*src: url(C:/Users/Sam/sspread.github.io/fonts/beantown/Beantown.ttf);*/
-}
-nav, h2, h3, h4, h5, h6, th, header, footer {
-    font-family: "Lucida Sans Unicode", sans-serif
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto);
+
+nav, h1, h2, h3, h4, h5, h6, th, header, footer {
+    font-family: "Gloria Hallelujah", sans-serif
 }
 .bg-img, .body-bg-img, .home-bg-img {
     background: url(/images/108a.jpg) no-repeat fixed;
@@ -51,7 +48,7 @@ nav, h2, h3, h4, h5, h6, th, header, footer {
     height: 100%;
 }
 .title {
-    font-family: "Beantown", "Lucida Sans Unicode", sans-serif;
+    font-family: "Gloria Hallelujah", "Lucida Sans Unicode", sans-serif;
     position: relative;
     transform: translateY(-7%);
     top: 7%;
@@ -62,7 +59,7 @@ nav, h2, h3, h4, h5, h6, th, header, footer {
     color: #D6EBFF;
 }
 .subtitle {
-    font-family: "Beantown", "Lucida Sans Unicode", sans-serif;
+    font-family: "Gloria Hallelujah", "Lucida Sans Unicode", sans-serif;
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
@@ -82,7 +79,7 @@ nav, h2, h3, h4, h5, h6, th, header, footer {
 }
 .btn {
     color: #333;
-    font-family: "Beantown", "Lucida Sans Unicode", sans-serif;
+    font-family: "Gloria Hallelujah", "Lucida Sans Unicode", sans-serif;
     margin-bottom: 10px;
     background-color: #D6EBFF;
 }
@@ -134,7 +131,7 @@ a:hover {
     padding: 5px;
 }
 #home-nav.affix {
-    opacity: .4;
+    opacity: .6;
 }
 #home-nav.affix:hover {
     opacity: .9;
@@ -152,7 +149,7 @@ a:hover {
 #contact a:hover {
     text-shadow: 0px 0px 5px #fff;
 }
-#collapser{
+#collapser {
     display: none;
     position: absolute;
     right: 8px;
@@ -180,13 +177,13 @@ a:hover {
     .subtitle h1 {
         font-size: 36px;
     }
-
     #home-nav .row {
-float: right;
+        float: right;
+        margin: ;
     }
     #home-nav.affix .row {
         position: absolute;
-        right:8px;
+        right: 8px;
         top: 50px;
     }
     #home-nav .btn {
