@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boatz'n'Blogz</title>
+    <link rel="stylesheet" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body class="bg-img">
+
+    <!-- _______________Bootstrap Nav _____________ -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Boatz 'n' Blogz</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html#tech">Tech</a>
+                    </li>
+                    <li><a href="../index.html#culture">Culture</a>
+                    </li>
+                    <li><a href="../projects/jungle_joe.html">Projects</a>
+                    </li>
+                    <!-- Contact Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://plus.google.com/117925567488555774987/posts">Google+</a>
+                            </li>
+                            <li><a href="https://github.com/sspread">GitHub</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/pub/sam-spread/1a/a20/396">LinkedIn</a>
+                            </li>
+                            <li><a href="https://twitter.com/scspread">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- RIGHT SIDE NAV POST TOGGLE -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="disabled">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-chevron-left"></span>Later Post</a>
+                    </li>
+                    <li><a href="#">Earlier Post<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- _________________End Bootstrap Nav_________________ -->
+
+    <div class="parallax">
+        <div class="parallax_group">
+            <div class="parallax_layer parallax_layer-back bg-img">TEST</div>
+
+            <div class="parallax_layer parallax_layer-base">
+                <div class="col-sm-9">
+
+                    <article>
+                        <h2>Website Redesign (aka Whack-a-Mole)</h2>
+                        <h4>
+                            <small>August 21.2014</small>
+                        </h4>
+                        <p>I recently dedicated a few days to redesigning this blog site. I had made significant changes probably five or six times already, but this time was a complete overhaul. I want to mention a few things about the process.</p>
+
+                        <h4>What Needed to Change</h4>
+                        <p>Previously, all of my blog posts for each category (i.e. tech, culture and projects) were on a single HTML page. I had made the posts collapsible to only show the headings, so that one page served as both a list of blog titles, and a place for the content of each. As I added to this page, I realized the HTML page was getting a too big and rather inflexible. I wanted to separate each post to its own page, but then I'd need an archive page. I looked back at my homepage and realized it was pretty unnecessary: it merely provided links to the other 3 pages, each of which did the same thing. So, I wanted to add some functionality to it. Finally, I needed to add a "contact" section somewhere.</p>
+
+                        <h4>Bootstrappin'</h4>
+                        <p>The guys at Twitter graciously provided a front-end design framework that has become quite popular among developers. The CSS file was over 6000 lines long. I decided to download the CSS and JS files and give it a shot. A bit of a lot to chew at first. To really understand the framework, you'd have read the lengthy documentation and experiment with it. So, I set up the Bootstrap CSS file in one window and my own HTML and CSS file in the other. As I thought of new design ideas I searched through the docs and CSS to see what tools were available to help me achieve my design goals.</p>
+
+                        <p>The grid styling provided an excellent framework for setting page items out in an organized and responsive fashion. I ended up placing most of the elements on my site in one of the grid divs. But of course, I wanted to customize everything so it didn't look like it came straight out of the Bootstrap box. Doing so was a complex process. I had to sift through the Bootstrap CSS to figure out how each element behaved, and then override it as necessary in my own CSS file.</p>
+
+                        <p>I ended up modifying almost everything that I did use from Bootstrap. One of the tools I changed minimally was the nav bar framework for the individual blog pages. Boostrap provided the CSS and JS for its nav bar to collapse for mobile into a drop-down menu that I found incredibly useful. Ultimately I treated Bootstrap as a toolbox more than a framework for my site. I utilized bits and pieces as I went along, but never let it dictate my design.</p>
+
+                        <h4>Challenges</h4>
+                        <p>One of the toughest design challenges I faced was the background image. I realize that a lot of sites do not have a full scrolling page background image, and I think maybe that is because it can be buggy and difficult to work in concert with the content. However, I wanted to give it a shot. The background image is actually fixed in the HTML body. The hazy section banners are separate background images with non-blurred content divs on top. The banner design was a relatively simple hack that I figured out after only seeing complex methods online. The whole combination makes it look like hazy bars scroll seamlessly over the constant background.</p>
+
+                        <p>Another challenge was implementing the sticky header buttons. This was a feature I had seen on other sites and really wanted to utilize it on my own. The home buttons stick to a fixed position on the top of the page once you scroll far enough down. A little JavaScript magic made this possible. But then I had to make them transparent and small to not step on the content. You can probably see how this becomes an endless redesign process</p>
+
+                        <h4>What Still Needs to Change</h4>
+                        <p>I feel that I was mostly successful in separating my blog posts, making a home page that serves as an archive with blog summaries, and utilizing some cool features. In fact, I was very happy with my site until I uploaded it and viewed it on my Galaxy. Ugh. The background effects don't look like they did on the computer. The nav buttons are too big. The margins are too wide. And on the iPhone, the initial home page view is all stretched out. I can adjust the margins and button placement for media queries, but I may have to scrap the background image for mobile sanity.</p>
+
+                        <h4>A Learning Experience</h4>
+                        <p>I could have predicted some of these mobile issues by resizing my computer browser, but other things came as a surprise. The whole redesign process feels a lot like playing Whack-a-Mole. As soon as I fix one issue, another pops up. And, there's always something can be improved. By using Bootstrap, but not following it too closely, I was able to add some cool features to my site without sacrificing uniqueness. However, in the attempt to customize and experiment, I lost some functionality. In any event, I can definitely say I improved my technical understanding by drilling into the code.</p>
+
+                        <footer>--- Week 9 ---</footer>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

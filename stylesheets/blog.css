@@ -2,7 +2,7 @@
 body {
     font-family: "Roboto", sans-serif;
 }
-.panel-footer, .contact-buttons, nav, h1, h2, h3, h4, h5, h6, th, header, footer {
+.panel-footer, nav, h1, h2, h3, h4, h5, h6, th, header, footer {
     font-family: "Gloria Hallelujah", cursive;
 }
 article h4 {
