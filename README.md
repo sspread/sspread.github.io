@@ -1,4 +1,4 @@
-sspread.github.io
+samspread.com
 =================
 
-DBC Phase 0 github pages site
+Personal website started in Dev Bootcamp Phase 0.
