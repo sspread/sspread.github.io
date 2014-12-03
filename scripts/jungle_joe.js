@@ -36,7 +36,7 @@ var player = {
 		var strikeX = parseInt(strikeCoords.charAt(0))
 		var strikeY = parseInt(strikeCoords.charAt(1))
 
-		// inflict damage (global) to joe's health based on grenade proximty
+		// inflict damage (global) to joe's health based on grenade proximity
 		damage=0
 		if (10-Math.abs(joe.locationX-strikeX)-Math.abs(joe.locationY-strikeY)>0) {
 			damage=(10-Math.abs(joe.locationX-strikeX)-Math.abs(joe.locationY-strikeY))

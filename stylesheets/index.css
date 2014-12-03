@@ -55,7 +55,6 @@ body {
     transform: translateY(-7%);
     top: 7%;
     padding-left: 10%;
-    /*font-style: italic;*/
     letter-spacing: 2px;
     text-shadow: 0px -4px 12px #2E2E6C;
     color: #D6EBFF;
@@ -66,7 +65,6 @@ body {
     transform: translateY(-50%);
     top: 50%;
     padding-left: 10%;
-    /*font-style: italic;*/
     letter-spacing: 2px;
     text-shadow: 0px 0px 17px #ffefff;
     color: #D6EBFF;
@@ -87,6 +85,12 @@ body {
 }
 .panel-heading a:hover {
     text-shadow: 3px 3px 5px #888;
+}
+.panel h3 {
+    display: inline;
+}
+.panel-btn {
+    float: right;
 }
 .btn:focus {
     color: #333;
