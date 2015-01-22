@@ -29,7 +29,6 @@ article {
 .navbar-brand {
     font-weight: bold;
 }
-/*.navbar-default .navbar-nav > li > a {color:;}*/
 
 .navbar-default .navbar-nav > li > a:focus {
     color: #777;
@@ -106,6 +105,12 @@ footer {
     font-size: .8em;
     width: 100%;
     opacity: .9;
+}
+
+.resume {
+    width: 820px;
+    max-width:100%;
+    height: 120vh;
 }
 /*---------------Media Queries-----------------*/
 
